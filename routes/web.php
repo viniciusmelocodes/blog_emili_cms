@@ -3,8 +3,9 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\EbookDownloadController;
 use App\Http\Controllers\LeadController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,17 +16,12 @@ use Illuminate\Support\Facades\Auth;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Auth::routes();
 
 Route::get('/', [BlogController::class, 'index']);
+
 Route::get('/operacao_cakes', function () {
     return redirect()->away('https://lp.egoi.page/1e2e5aCS/OperacaoCakes');
 });
@@ -41,8 +37,12 @@ Route::prefix('receitas-doces')->group(function () {
     Route::get('/meuebook/{email}', [EbookDownloadController::class, 'fazerDownload'])->name('lead_fazer_download_meu_ebook');
 });
 
-Auth::routes();
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::prefix('postagens')->group(function () {
+    Route::get('/', [PostController::class, 'index'])->middleware(['auth'])->name('index-posts');
+});
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
