@@ -1,0 +1,1488 @@
+body {
+    font-family: "Raleway", sans-serif !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.primeiro-quadro,
+.sexto-quadro {
+    background-image: url("https://i.ibb.co/yWRy6X4/background.webp");
+    padding: 30px;
+}
+
+.segundo-quadro {
+    background-color: #33b6d4;
+}
+
+.terceiro-quadro,
+.oitavo-quadro {
+    background-color: #f6e6ff;
+    padding-bottom: 60px;
+}
+
+.quarto-quadro {
+    background-image: url("https://i.ibb.co/vvqRJrb/background-3.png");
+    padding: 30px;
+}
+
+.quinto-quadro {
+    background-image: url("https://i.ibb.co/vvqRJrb/background-3.png");
+    padding: 30px;
+}
+
+.setimo-quadro {
+    background-color: #27b7d2;
+    padding-bottom: 40px;
+}
+
+.sombra {
+    box-shadow: 3px 5px 5px black;
+}
+
+.texto-alinhamento-justificado {
+    text-align: justify;
+}
+
+.texto-alinhamento-esquerda {
+    text-align: left;
+}
+
+.texto-alinhamento-direita {
+    text-align: right;
+}
+
+.texto-alinhamento-centralizado {
+    text-align: center;
+}
+
+.texto-vermelho {
+    color: red;
+}
+
+/* 1441px a 2560px */
+@media only screen and (min-width: 1441px) and (max-width: 2560px) {
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited {
+        background-color: #dd5e89 !important;
+        border-color: #dd5e89 !important;
+        border-radius: 20px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        padding: 30px !important;
+    }
+
+    .texto-vermelho-grande {
+        padding-top: 80px;
+        color: red;
+        font-size: 60px;
+    }
+
+    .texto-padrao-pequeno {
+        font-size: 20px;
+    }
+
+    .texto-padrao-medio {
+        font-size: 30px;
+        padding-top: 40px;
+    }
+
+    .texto-padrao-grande {
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    .video-emili {
+        padding-top: 40px;        
+        width: 1400px !important;
+        height: 1400px !important;
+    }
+
+    .videos-depoimentos {
+        padding-top: 40px;
+        width: 600px !important;
+        height: 600px !important;
+    }
+
+    .linha-margem {
+        padding-top: 40px;
+    }
+
+    .linha-margem-rodape {
+        padding-bottom: 40px;
+    }
+
+    .texto-sobre-emili {
+        font-size: 30px;
+    }
+
+    .voce-vai-receber {
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .serve-para-voce-que {
+        width: 300px;
+        height: 240px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .condicao-especial-tudo-incluso {
+        width: 300px;
+        height: 400px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Veja receitas */
+    .imagem-secao-veja-receitas {
+        width: 3%;
+    }
+
+    .texto-secao-veja-receitas-1 {
+        padding-left: 150px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-2 {
+        padding-left: 190px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-3 {
+        padding-left: 230px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-4 {
+        padding-left: 270px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-5 {
+        padding-left: 150px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-6 {
+        padding-left: 190px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-7 {
+        padding-left: 230px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-8 {
+        padding-left: 270px;
+        font-size: 30px;
+    }
+
+    /* Bonus */
+    .secao-bonus {
+        margin-top: 40px;
+    }
+
+    .texto-medio {
+        margin-top: -30px;
+        font-size: 30px;
+    }
+
+    .imagem-secao-bonus {
+        width: 40%;
+        margin-top: 20px;
+    }
+
+    .bonus {
+        display: flex;
+    }
+
+    .linha-bonus {
+        margin-top: 30px !important;
+    }
+
+    .bonus-imagem {
+        background-color: white;
+        border-radius: 80px 0px 0px 80px;
+    }
+
+    .bonus-texto {
+        background-color: white;
+        border-radius: 80px 80px 80px 80px;
+        font-size: 30px;
+    }
+
+    .bonus-titulo-texto-explicativo {
+        margin-top: 40px;
+    }
+
+    .bonus-texto-explicativo {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .icone-1,
+    .icone-2,
+    .icone-3,
+    .icone-4,
+    .icone-7,
+    .icone-8,
+    .icone-9,
+    .icone-10 {
+        width: 40%;
+    }
+
+    .icone-11 {
+        width: 25%;
+        padding-top: 40px;
+    }
+
+    .icone-12 {
+        width: 55%;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    .icone-13 {
+        width: 45%;
+        padding-left: 53px;
+    }
+
+    .icone-14 {
+        width: 40%;
+        padding: 80px;
+    }
+
+    .borda-topo {
+        background-color: white;
+        border-top-width: 7px;
+        border-top-style: solid;
+        border-top-color: #cf2e4f;
+    }
+}
+
+/* 1025px a 1440px */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited {
+        background-color: #dd5e89 !important;
+        border-color: #dd5e89 !important;
+        border-radius: 20px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        padding: 30px !important;
+    }
+
+    .texto-vermelho-grande {
+        padding-top: 80px;
+        color: red;
+        font-size: 30px;
+    }
+
+    .texto-padrao-pequeno {
+        font-size: 16px;
+    }
+
+    .texto-padrao-medio {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+
+    .texto-padrao-grande {
+        font-size: 30px;
+        padding-top: 40px;
+    }
+
+    .video-emili {
+        padding-top: 40px;        
+        width: 900px !important;
+        height: 900px !important;
+    }
+
+    .videos-depoimentos {
+        padding-top: 40px;        
+        width: 500px !important;
+        height: 500px !important;
+    }
+
+    .texto-sobre-emili {
+        font-size: 20px;
+    }
+
+    .linha-margem {
+        padding-top: 40px;
+    }
+
+    .linha-margem-rodape {
+        padding-bottom: 40px;
+    }
+
+    .voce-vai-receber {
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .serve-para-voce-que {
+        width: 300px;
+        height: 240px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .condicao-especial-tudo-incluso {
+        width: 300px;
+        height: 400px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Veja receitas */
+    .imagem-secao-veja-receitas {
+        width: 4%;
+    }
+
+    .texto-secao-veja-receitas-1 {
+        padding-left: 150px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-2 {
+        padding-left: 190px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-3 {
+        padding-left: 230px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-4 {
+        padding-left: 270px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-5 {
+        padding-left: 150px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-6 {
+        padding-left: 190px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-7 {
+        padding-left: 230px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-8 {
+        padding-left: 270px;
+        font-size: 30px;
+    }
+
+    /* Bonus */
+    .secao-bonus {
+        margin-top: 40px;
+    }
+
+    .texto-medio {
+        margin-top: -30px;
+        font-size: 30px;
+    }
+
+    .imagem-secao-bonus {
+        width: 35%;
+        margin-top: 20px;
+    }
+
+    .bonus {
+        display: flex;
+    }
+
+    .linha-bonus {
+        margin-top: 30px !important;
+    }
+
+    .bonus-imagem {
+        background-color: white;
+        border-radius: 80px 0px 0px 80px;
+    }
+
+    .bonus-texto {
+        background-color: white;
+        border-radius: 80px 80px 80px 80px;
+        font-size: 30px;
+    }
+
+    .bonus-titulo-texto-explicativo {
+        margin-top: 40px;
+    }
+
+    .bonus-texto-explicativo {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .icone-1,
+    .icone-2,
+    .icone-3,
+    .icone-4,
+    .icone-7,
+    .icone-8,
+    .icone-9,
+    .icone-10 {
+        width: 40%;
+    }
+
+    .icone-11 {
+        width: 25%;
+        padding-top: 40px;
+    }
+
+    .icone-12 {
+        width: 55%;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    .icone-13 {
+        width: 40%;
+        padding-left: 43px;
+    }
+
+    .icone-14 {
+        width: 40%;
+        padding: 80px;
+    }
+
+    .borda-topo {
+        background-color: white;
+        border-top-width: 7px;
+        border-top-style: solid;
+        border-top-color: #cf2e4f;
+    }
+}
+
+/* 769px a 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited {
+        background-color: #dd5e89 !important;
+        border-color: #dd5e89 !important;
+        border-radius: 20px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        padding: 30px !important;
+    }
+
+    .texto-vermelho-grande {
+        padding-top: 80px;
+        color: red;
+        font-size: 40px;
+    }
+
+    .texto-padrao-pequeno {
+        font-size: 13px;
+    }
+
+    .texto-padrao-medio {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+
+    .texto-padrao-grande {
+        font-size: 30px;
+        padding-top: 40px;
+    }
+
+    .video-emili {
+        padding-top: 40px;        
+        width: 700px !important;
+        height: 700px !important;
+    }
+
+    .videos-depoimentos {
+        padding-top: 40px;
+        width: 450px !important;
+        height: 450px !important;
+    }
+
+    .texto-sobre-emili {
+        font-size: 20px;
+    }
+
+    .linha-margem {
+        padding-top: 40px;
+    }
+
+    .linha-margem-rodape {
+        padding-bottom: 40px;
+    }
+
+    .voce-vai-receber {
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .serve-para-voce-que {
+        width: 300px;
+        height: 240px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .condicao-especial-tudo-incluso {
+        width: 300px;
+        height: 400px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Veja receitas */
+    .imagem-secao-veja-receitas {
+        width: 4%;
+    }
+
+    .texto-secao-veja-receitas-1 {
+        padding-left: 80px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-2 {
+        padding-left: 120px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-3 {
+        padding-left: 160px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-4 {
+        padding-left: 200px;
+        font-size: 27px;
+    }
+
+    .texto-secao-veja-receitas-5 {
+        padding-left: 80px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-6 {
+        padding-left: 120px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-7 {
+        padding-left: 160px;
+        font-size: 30px;
+    }
+
+    .texto-secao-veja-receitas-8 {
+        padding-left: 200px;
+        font-size: 30px;
+    }
+
+    /* Bonus */
+    .secao-bonus {
+        margin-top: 40px;
+    }
+
+    .texto-medio {
+        margin-top: -30px;
+        font-size: 30px;
+    }
+
+    .imagem-secao-bonus {
+        width: 40%;
+        padding-top: 35px;
+    }
+
+    .bonus {
+        display: flex;
+    }
+
+    .linha-bonus {
+        margin-top: 30px !important;
+    }
+
+    .bonus-imagem {
+        background-color: white;
+        border-radius: 80px 80px 80px 80px;
+    }
+
+    .bonus-texto {
+        background-color: white;
+        border-radius: 80px 80px 80px 80px;
+        font-size: 30px;
+    }
+
+    .bonus-titulo-texto-explicativo {
+        margin-top: 40px;
+    }
+
+    .bonus-texto-explicativo {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .icone-1,
+    .icone-2,
+    .icone-3,
+    .icone-4,
+    .icone-7,
+    .icone-8,
+    .icone-9,
+    .icone-10 {
+        width: 40%;
+    }
+
+    .icone-11 {
+        width: 35%;
+        padding-top: 40px;
+    }
+
+    .icone-12 {
+        width: 75%;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    .icone-13 {
+        width: 50%;
+        padding-left: 60px;
+    }
+
+    .icone-14 {
+        width: 60%;
+        padding: 80px;
+    }
+
+    .borda-topo {
+        background-color: white;
+        border-top-width: 7px;
+        border-top-style: solid;
+        border-top-color: #cf2e4f;
+    }
+}
+
+/* 426px a 768px */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited {
+        background-color: #dd5e89 !important;
+        border-color: #dd5e89 !important;
+        border-radius: 20px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        padding: 30px !important;
+    }
+
+    .texto-vermelho-grande {
+        padding-top: 40px;
+        color: red;
+        font-size: 20px;
+    }
+
+    .texto-padrao-pequeno {
+        font-size: 13px;
+    }
+
+    .texto-padrao-medio {
+        font-size: 15px;
+        padding-top: 40px;
+    }
+
+    .texto-padrao-grande {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+
+    .video-emili {
+        padding-top: 40px;        
+        width: 400px !important;
+        height: 400px !important;
+    }
+
+    .videos-depoimentos {
+        padding-top: 40px;        
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+    .texto-sobre-emili {
+        font-size: 15px;
+    }
+
+    .linha-margem {
+        padding-top: 40px;
+    }
+
+    .linha-margem-rodape {
+        padding-bottom: 40px;
+    }
+
+    .voce-vai-receber {
+        width: 222px;
+        height: 318px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .serve-para-voce-que {
+        width: 222px;
+        height: 240px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .condicao-especial-tudo-incluso {
+        width: 220px;
+        height: 370px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Veja receitas */
+    .imagem-secao-veja-receitas {
+        width: 7% !important;
+    }
+
+    .texto-secao-veja-receitas-1 {
+        font-size: 15px;
+    }
+
+    .texto-secao-veja-receitas-2 {
+        font-size: 15px;
+        padding-left: 40px;
+    }
+
+    .texto-secao-veja-receitas-3 {
+        font-size: 15px;
+        padding-left: 60px;
+    }
+
+    .texto-secao-veja-receitas-4 {
+        font-size: 15px;
+        padding-left: 100px;
+    }
+
+    .texto-secao-veja-receitas-5 {
+        font-size: 15px;
+        padding-left: 40px;
+    }
+
+    .texto-secao-veja-receitas-6 {
+        font-size: 15px;
+        padding-left: 80px;
+    }
+
+    .texto-secao-veja-receitas-7 {
+        font-size: 15px;
+        padding-left: 120px;
+    }
+
+    .texto-secao-veja-receitas-8 {
+        font-size: 15px;
+        padding-left: 160px;
+    }
+
+    /* Bonus */
+    .secao-bonus {
+        margin-top: 40px;
+    }
+
+    .texto-medio {
+        margin-top: -30px;
+        font-size: 30px;
+    }
+
+    .imagem-secao-bonus {
+        width: 45%;
+        padding-top: 15px;
+    }
+
+    .bonus {
+        display: flex;
+    }
+
+    .linha-bonus {
+        margin-top: 30px !important;
+    }
+
+    .bonus-imagem {
+        background-color: white;
+        border-radius: 80px 0px 0px 80px;
+    }
+
+    .bonus-texto {
+        background-color: white;
+        border-radius: 80px 80px 80px 80px;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .bonus-titulo-texto-explicativo {
+        font-size: 20px;
+        margin-top: 5px;
+        padding: 10px;
+    }
+
+    .bonus-texto-explicativo {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .icone-1,
+    .icone-2,
+    .icone-3,
+    .icone-4,
+    .icone-7,
+    .icone-8,
+    .icone-9,
+    .icone-10 {
+        width: 40%;
+    }
+
+    .icone-11 {
+        width: 35%;
+        padding-top: 40px;
+    }
+
+    .icone-12 {
+        width: 80%;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    .icone-13 {
+        width: 50%;
+        margin-left: 40px;
+    }
+
+    .icone-14 {
+        width: 40%;
+        padding: 20px;
+    }
+
+    .borda-topo {
+        background-color: white;
+        border-top-width: 7px;
+        border-top-style: solid;
+        border-top-color: #cf2e4f;
+    }
+}
+
+/* 376px a 425px */
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited {
+        background-color: #dd5e89 !important;
+        border-color: #dd5e89 !important;
+        border-radius: 20px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        padding: 16px !important;
+    }
+
+    .texto-vermelho-grande {
+        padding-top: 40px;
+        color: red;
+        font-size: 20px;
+    }
+
+    .texto-padrao-pequeno {
+        font-size: 13px;
+    }
+
+    .texto-padrao-medio {
+        font-size: 15px;
+        padding-top: 40px;
+    }
+
+    .texto-padrao-grande {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+
+    .videos-depoimentos {
+        padding-top: 40px;        
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .texto-sobre-emili {
+        font-size: 15px;
+    }
+
+    .linha-margem {
+        padding-top: 40px;
+    }
+
+    .linha-margem-rodape {
+        padding-bottom: 40px;
+    }
+
+    .voce-vai-receber {
+        width: 222px;
+        height: 318px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .serve-para-voce-que {
+        width: 222px;
+        height: 240px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .condicao-especial-tudo-incluso {
+        width: 220px;
+        height: 370px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Veja receitas */
+    .imagem-secao-veja-receitas {
+        width: 11% !important;
+    }
+
+    .texto-secao-veja-receitas-1 {
+        font-size: 13px;
+    }
+
+    .texto-secao-veja-receitas-2 {
+        font-size: 13px;
+        /* padding-left: 60px; */
+    }
+
+    .texto-secao-veja-receitas-3 {
+        font-size: 13px;
+    }
+
+    .texto-secao-veja-receitas-4 {
+        font-size: 13px;
+    }
+
+    .texto-secao-veja-receitas-5 {
+        font-size: 13px;
+        /* padding-left: 40px; */
+    }
+
+    .texto-secao-veja-receitas-6 {
+        font-size: 13px;
+        /* padding-left: 80px; */
+    }
+
+    .texto-secao-veja-receitas-7 {
+        font-size: 13px;
+        /* padding-left: 120px; */
+    }
+
+    .texto-secao-veja-receitas-8 {
+        font-size: 13px;
+        /* padding-left: 160px; */
+    }
+
+    /* Bonus */
+    .secao-bonus {
+        margin-top: 40px;
+    }
+
+    .texto-medio {
+        margin-top: -30px;
+        font-size: 30px;
+    }
+
+    .imagem-secao-bonus {
+        width: 40%;
+        padding-top: 15px;
+    }
+
+    .bonus {
+        display: flex;
+    }
+
+    .linha-bonus {
+        margin-top: 30px !important;
+    }
+
+    .bonus-imagem {
+        background-color: white;
+        border-radius: 80px 0px 0px 80px;
+    }
+
+    .bonus-texto {
+        background-color: white;
+        border-radius: 80px 80px 80px 80px;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .bonus-titulo-texto-explicativo {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .bonus-texto-explicativo {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .icone-1,
+    .icone-2,
+    .icone-3,
+    .icone-4,
+    .icone-7,
+    .icone-8,
+    .icone-9,
+    .icone-10 {
+        width: 40%;
+    }
+
+    .icone-11 {
+        width: 55%;
+        padding-top: 40px;
+    }
+
+    .icone-12 {
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    .icone-13 {
+        width: 80%;
+        margin-left: 26px;
+    }
+
+    .icone-14 {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .borda-topo {
+        background-color: white;
+        border-top-width: 7px;
+        border-top-style: solid;
+        border-top-color: #cf2e4f;
+    }
+}
+
+/* 321px a 375px */
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited {
+        background-color: #dd5e89 !important;
+        border-color: #dd5e89 !important;
+        border-radius: 20px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        padding: 16px !important;
+    }
+
+    .texto-vermelho-grande {
+        padding-top: 40px;
+        color: red;
+        font-size: 20px;
+    }
+
+    .texto-padrao-pequeno {
+        font-size: 13px;
+    }
+
+    .texto-padrao-medio {
+        font-size: 15px;
+        padding-top: 40px;
+    }
+
+    .texto-padrao-grande {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+
+    .videos-depoimentos {
+        padding-top: 40px;        
+        width: 250px !important;
+        height: 250px !important;
+    }    
+    
+    .texto-sobre-emili {
+        font-size: 15px;
+    }
+
+    .linha-margem {
+        padding-top: 40px;
+    }
+
+    .linha-margem-rodape {
+        padding-bottom: 40px;
+    }
+
+    .voce-vai-receber {
+        width: 222px;
+        height: 318px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .serve-para-voce-que {
+        width: 222px;
+        height: 240px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .condicao-especial-tudo-incluso {
+        width: 220px;
+        height: 370px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Veja receitas */
+    .imagem-secao-veja-receitas {
+        width: 11% !important;
+    }
+
+    .texto-secao-veja-receitas-1 {
+        font-size: 13px;
+    }
+
+    .texto-secao-veja-receitas-2 {
+        font-size: 13px;
+        /* padding-left: 60px; */
+    }
+
+    .texto-secao-veja-receitas-3 {
+        font-size: 13px;
+    }
+
+    .texto-secao-veja-receitas-4 {
+        font-size: 13px;
+    }
+
+    .texto-secao-veja-receitas-5 {
+        font-size: 13px;
+        /* padding-left: 40px; */
+    }
+
+    .texto-secao-veja-receitas-6 {
+        font-size: 13px;
+        /* padding-left: 80px; */
+    }
+
+    .texto-secao-veja-receitas-7 {
+        font-size: 13px;
+        /* padding-left: 120px; */
+    }
+
+    .texto-secao-veja-receitas-8 {
+        font-size: 13px;
+        /* padding-left: 160px; */
+    }
+
+    /* Bonus */
+    .secao-bonus {
+        margin-top: 40px;
+    }
+
+    .texto-medio {
+        margin-top: -30px;
+        font-size: 30px;
+    }
+
+    .imagem-secao-bonus {
+        width: 50%;
+        padding-top: 15px;
+    }
+
+    .bonus {
+        display: flex;
+    }
+
+    .linha-bonus {
+        margin-top: 30px !important;
+    }
+
+    .bonus-imagem {
+        background-color: white;
+        border-radius: 80px 0px 0px 80px;
+    }
+
+    .bonus-texto {
+        background-color: white;
+        border-radius: 80px 80px 80px 80px;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .bonus-titulo-texto-explicativo {
+        font-size: 20px;
+        margin-top: 5px;
+        padding: 10px;
+    }
+
+    .bonus-texto-explicativo {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .icone-1,
+    .icone-2,
+    .icone-3,
+    .icone-4,
+    .icone-7,
+    .icone-8,
+    .icone-9,
+    .icone-10 {
+        width: 40%;
+    }
+
+    .icone-11 {
+        width: 55%;
+        padding-top: 40px;
+    }
+
+    .icone-12 {
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    .icone-13 {
+        width: 80%;
+        margin-left: 25px;
+    }
+
+    .icone-14 {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .borda-topo {
+        background-color: white;
+        border-top-width: 7px;
+        border-top-style: solid;
+        border-top-color: #cf2e4f;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited {
+        background-color: #dd5e89 !important;
+        border-color: #dd5e89 !important;
+        border-radius: 20px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        padding: 16px !important;
+    }
+
+    .texto-vermelho-grande {
+        padding-top: 40px;
+        color: red;
+        font-size: 20px;
+    }
+
+    .texto-padrao-pequeno {
+        font-size: 13px;
+    }
+
+    .texto-padrao-medio {
+        font-size: 15px;
+        padding-top: 40px;
+    }
+
+    .texto-padrao-grande {
+        font-size: 20px;
+        padding-top: 40px;
+    }
+
+    .videos-depoimentos {
+        padding-top: 40px;        
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+    .texto-sobre-emili {
+        font-size: 15px;
+    }
+
+    .linha-margem {
+        padding-top: 40px;
+    }
+
+    .linha-margem-rodape {
+        padding-bottom: 40px;
+    }
+
+    .voce-vai-receber {
+        width: 222px;
+        height: 318px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .serve-para-voce-que {
+        width: 222px;
+        height: 240px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .condicao-especial-tudo-incluso {
+        width: 220px;
+        height: 370px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Veja receitas */
+    .imagem-secao-veja-receitas {
+        width: 11% !important;
+    }
+
+    .texto-secao-veja-receitas-1 {
+        font-size: 13px;
+    }
+
+    .texto-secao-veja-receitas-2 {
+        font-size: 13px;
+        /* padding-left: 60px; */
+    }
+
+    .texto-secao-veja-receitas-3 {
+        font-size: 13px;
+    }
+
+    .texto-secao-veja-receitas-4 {
+        font-size: 13px;
+    }
+
+    .texto-secao-veja-receitas-5 {
+        font-size: 13px;
+        /* padding-left: 40px; */
+    }
+
+    .texto-secao-veja-receitas-6 {
+        font-size: 13px;
+        /* padding-left: 80px; */
+    }
+
+    .texto-secao-veja-receitas-7 {
+        font-size: 13px;
+        /* padding-left: 120px; */
+    }
+
+    .texto-secao-veja-receitas-8 {
+        font-size: 13px;
+        /* padding-left: 160px; */
+    }
+
+    /* Bonus */
+    .secao-bonus {
+        margin-top: 40px;
+    }
+
+    .texto-medio {
+        margin-top: -30px;
+        font-size: 30px;
+    }
+
+    .imagem-secao-bonus {
+        width: 50%;
+        padding-top: 15px;
+    }
+
+    .bonus {
+        display: flex;
+    }
+
+    .linha-bonus {
+        margin-top: 30px !important;
+    }
+
+    .bonus-imagem {
+        background-color: white;
+        border-radius: 80px 0px 0px 80px;
+    }
+
+    .bonus-texto {
+        background-color: white;
+        border-radius: 80px 80px 80px 80px;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .bonus-titulo-texto-explicativo {
+        font-size: 20px;
+        margin-top: 5px;
+        padding: 10px;
+    }
+
+    .bonus-texto-explicativo {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .icone-1,
+    .icone-2,
+    .icone-3,
+    .icone-4,
+    .icone-7,
+    .icone-8,
+    .icone-9,
+    .icone-10 {
+        width: 30%;
+    }
+
+    .icone-11 {
+        width: 55%;
+        padding-top: 40px;
+    }
+
+    .icone-12 {
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+
+    .icone-13 {
+        width: 100%;
+        margin-top: -27px;
+        margin-left: 15px;
+    }
+
+    .icone-14 {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .borda-topo {
+        background-color: white;
+        border-top-width: 7px;
+        border-top-style: solid;
+        border-top-color: #cf2e4f;
+    }
+}

@@ -1,0 +1,742 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    box-shadow: 0px 0 10px rgb(0, 0, 0);
+    z-index: 100;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: black;
+    text-decoration: none;
+}
+
+.one-edge-shadow {
+    -webkit-box-shadow: 0 10px 6px -6px #4b4b4b;
+    -moz-box-shadow: 0 10px 6px -6px #4b4b4b;
+    box-shadow: 0 10px 6px -6px #4b4b4b;
+}
+
+.texto-menu:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.texto-menu:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.rodape-blog {
+    padding: 2.5rem 0;
+    color: #999;
+    text-align: center;
+    background-color: #000000;
+    border-top: 0.05rem solid #e5e5e5;
+}
+
+.rodape-blog p:last-child {
+    margin-bottom: 0;
+}
+
+.topo-blog {
+    background-color: #fdf6ee;
+    margin-bottom: 7px;
+}
+
+.menu-blog {
+    background-color: #f7c8d0;
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo-blog {
+    background-image: url("https://i.ibb.co/yWRy6X4/background.webp");
+}
+
+.texto-menu {
+    font-family: "Pacifico", cursive;
+}
+
+/* 4K */
+@media only screen and (max-width: 2560px) {
+    .row {
+        margin-right: 0px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .icones-menu {
+        width: 14%;
+        height: 78%;
+    }
+
+    .link-menu {
+        margin-top: 3px;
+        margin-left: 8px;
+        font-size: 27px;
+    }
+
+    .icone-rodape {
+        width: 23%;
+        margin-bottom: 7px;
+    }
+
+    .icone-moonlander {
+        width: 50px;
+    }
+
+    .conteudo {
+        font-family: "Pacifico", cursive;
+        font-size: 55px;
+        margin-top: 600px;
+        margin-bottom: 600px;
+    }
+
+    .texto-rodape {
+        font-size: 30px;
+    }
+
+    .col-9 {
+        flex: 0 0 0% !important;
+    }
+
+    #logomarca {
+        margin-top: 5%;
+        margin-left: 25%;
+        margin-bottom: 5%;
+        width: 64%;
+    }
+
+    #topo-texto {
+        font-family: "Pacifico", cursive;
+        margin-top: 3%;
+        margin-left: 20px;
+        font-size: 49px;
+    }
+
+    #topo-segunda-linha {
+        margin-left: 20%;
+        font-size: 49px;
+    }
+
+    #autor-desconhecido {
+        font-family: "DM Sans", sans-serif;
+        margin-left: 691px;
+        font-size: 21px;
+    }
+
+    #desenvolvido-por {
+        margin-top: 28px;
+    }
+}
+
+/* Laptop L */
+@media only screen and (max-width: 1440px) {
+    .row {
+        margin-right: 0px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .icones-menu {
+        width: 15%;
+        height: 82%;
+    }
+
+    .link-menu {
+        margin-top: 3px;
+        margin-left: 6px;
+        font-size: 24px;
+    }
+
+    .icone-rodape {
+        width: 18%;
+    }
+
+    .icone-moonlander {
+        width: 3%;
+    }
+
+    .conteudo {
+        font-family: "Pacifico", cursive;
+        font-size: 45px;
+    }
+
+    .texto-rodape {
+        font-size: 20px;
+    }
+
+    #logomarca {
+        margin-top: 20px;
+        margin-left: 80px;
+        width: 70%;
+    }
+
+    #topo-texto {
+        font-family: "Pacifico", cursive;
+        margin-top: 2%;
+        margin-left: 126px;
+        font-size: 34px;
+    }
+
+    #topo-segunda-linha {
+        margin-left: 100px;
+        font-size: 34px;
+    }
+
+    #autor-desconhecido {
+        font-family: "DM Sans", sans-serif;
+        margin-left: 368px;
+        font-size: 24px;
+    }
+
+    #desenvolvido-por {
+        margin-top: 28px;
+    }
+}
+
+/* Laptop */
+@media only screen and (max-width: 1024px) {
+    .row {
+        margin-right: 0px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .icones-menu {
+        width: 20%;
+        height: 77%;
+        margin-top: 2px;
+    }
+
+    .link-menu {
+        margin-top: 10px;
+        margin-left: 6px;
+        font-size: 18px;
+    }
+
+    .icone-rodape {
+        width: 20%;
+    }
+
+    .icone-moonlander {
+        width: 3%;
+    }
+
+    .conteudo {
+        font-family: "Pacifico", cursive;
+        font-size: 25px;
+    }
+
+    .texto-rodape {
+        font-size: 20px;
+    }
+
+    #logomarca {
+        margin-top: 20px;
+        margin-left: 44px;
+        width: 91%;
+    }
+
+    #topo-texto {
+        font-family: "Pacifico", cursive;
+        margin-top: 6%;
+        margin-left: 105px;
+        font-size: 24px;
+    }
+
+    #topo-segunda-linha {
+        margin-left: 40px;
+        font-size: 24px;
+    }
+
+    #autor-desconhecido {
+        font-family: "DM Sans", sans-serif;
+        margin-left: 255px;
+        font-size: 14px;
+    }
+
+    #desenvolvido-por {
+        margin-top: 28px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .row {
+        margin-right: 0px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .icones-menu {
+        width: 22%;
+        height: 79%;
+        margin-top: 3px;
+    }
+
+    .link-menu {
+        margin-top: 10px;
+        margin-left: 6px;
+        font-size: 13px;
+    }
+
+    .icone-rodape {
+        width: 30%;
+    }
+
+    .icone-moonlander {
+        width: 4%;
+    }
+
+    .conteudo {
+        font-family: "Pacifico", cursive;
+        font-size: 25px;
+    }
+
+    .texto-rodape {
+        font-size: 20px;
+    }
+
+    #logomarca {
+        margin-top: 20px;
+        margin-left: 40px;
+        width: 80%;
+    }
+
+    #topo-texto {
+        font-family: "Pacifico", cursive;
+        margin-top: 3%;
+        margin-left: 40px;
+        font-size: 24px;
+    }
+
+    #topo-segunda-linha {
+        margin-left: 40px;
+        font-size: 24px;
+    }
+
+    #autor-desconhecido {
+        font-family: "DM Sans", sans-serif;
+        margin-left: 255px;
+        font-size: 14px;
+    }
+
+    #desenvolvido-por {
+        margin-top: 28px;
+    }
+}
+
+/*  */
+@media only screen and (max-width: 640px) {
+    .row {
+        margin-right: 0px !important;
+    }
+
+    .icones-menu {
+        width: 0%;
+        color: #f7c8d0;
+    }
+
+    .link-menu {
+        margin-top: 13px;
+        margin-left: 6px;
+        font-size: 20px;
+    }
+
+    .icone-rodape {
+        width: 80%;
+    }
+
+    .icone-moonlander {
+        width: 10%;
+    }
+
+    .conteudo {
+        font-family: "Pacifico", cursive;
+        font-size: 25px;
+    }
+
+    .texto-rodape {
+        font-size: 20px;
+    }
+
+    #logomarca {
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+        width: 220%;
+    }
+
+    #topo-texto {
+        font-family: "Pacifico", cursive;
+        margin-top: 3%;
+        margin-left: 90px;
+        font-size: 24px;
+    }
+
+    #topo-segunda-linha {
+        margin-left: 30px;
+        font-size: 24px;
+    }
+
+    #autor-desconhecido {
+        font-family: "DM Sans", sans-serif;
+        margin-left: 94px;
+        font-size: 14px;
+    }
+
+    #desenvolvido-por {
+        margin-top: 28px;
+    }
+}
+
+/* Surface Duo */
+@media only screen and (max-width: 540px) {
+    .row {
+        margin-right: 0px !important;
+        flex-wrap: wrap !important;
+    }
+
+    .icones-menu {
+        width: 0%;
+        color: #f7c8d0;
+    }
+
+    .link-menu {
+        margin-top: 13px;
+        margin-left: 6px;
+        font-size: 20px;
+    }
+
+    .icone-rodape {
+        width: 80%;
+    }
+
+    .icone-moonlander {
+        width: 10%;
+    }
+
+    .conteudo {
+        font-family: "Pacifico", cursive;
+        font-size: 25px;
+    }
+
+    .texto-rodape {
+        font-size: 20px;
+    }
+
+    #logomarca {
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+        width: 200%;
+    }
+
+    #topo-texto {
+        font-family: "Pacifico", cursive;
+        margin-top: 3%;
+        margin-left: 90px;
+        font-size: 24px;
+    }
+
+    #topo-segunda-linha {
+        margin-left: 30px;
+        font-size: 24px;
+    }
+
+    #autor-desconhecido {
+        font-family: "DM Sans", sans-serif;
+        margin-left: 94px;
+        font-size: 14px;
+    }
+
+    #desenvolvido-por {
+        margin-top: 28px;
+    }
+}
+
+/* Mobile L */
+@media only screen and (max-width: 425px) {
+    .row {
+        margin-right: 0px !important;
+        flex-wrap: wrap !important;
+    }
+
+    .icones-menu {
+        width: 46%;
+        margin-top: 19px;
+        height: 43%;
+        color: #f7c8d0;
+    }
+
+    .link-menu {
+        margin-top: 26px;
+        margin-left: 6px;
+        font-size: 12px;
+    }
+
+    .icone-rodape {
+        width: 30px;
+    }
+
+    .icone-moonlander {
+        width: 30px;
+    }
+
+    .conteudo {
+        font-family: "Pacifico", cursive;
+        font-size: 25px;
+    }
+
+    .texto-rodape {
+        font-size: 16px;
+    }
+
+    #logomarca {
+        margin-top: 9px;
+        margin-left: 156px;
+        width: 149%;
+    }
+
+    #topo-texto {
+        font-family: "Pacifico", cursive;
+        margin-top: 3%;
+        margin-left: 48px;
+        font-size: 24px;
+    }
+
+    #topo-segunda-linha {
+        margin-left: 30px;
+        font-size: 24px;
+    }
+
+    #autor-desconhecido {
+        font-family: "DM Sans", sans-serif;
+        margin-left: 244px;
+        font-size: 14px;
+    }
+
+    #desenvolvido-por {
+        margin-top: 28px;
+    }
+}
+
+/* iPhone 6/7/8 Plus */
+@media only screen and (max-width: 414px) {
+    .row {
+        margin-right: 0px !important;
+    }
+
+    .icones-menu {
+        width: 0%;
+        color: #f7c8d0;
+    }
+
+    .link-menu {
+        margin-top: 13px;
+        margin-left: 6px;
+        font-size: 20px;
+    }
+
+    .icone-rodape {
+        width: 80%;
+    }
+
+    .icone-moonlander {
+        width: 10%;
+    }
+
+    .conteudo {
+        font-family: "Pacifico", cursive;
+        font-size: 20px;
+    }
+
+    .texto-rodape {
+        font-size: 20px;
+    }
+
+    #logomarca {
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+        width: 220%;
+    }
+
+    #topo-texto {
+        font-family: "Pacifico", cursive;
+        margin-top: 3%;
+        margin-left: 90px;
+        font-size: 24px;
+    }
+
+    #topo-segunda-linha {
+        margin-left: 30px;
+        font-size: 24px;
+    }
+
+    #autor-desconhecido {
+        font-family: "DM Sans", sans-serif;
+        margin-left: 94px;
+        font-size: 14px;
+    }
+
+    #desenvolvido-por {
+        margin-top: 28px;
+    }
+}
+
+/* iPhone X, Galaxy S5 e Mobile M */
+@media only screen and (max-width: 375px) {
+    .icone-rodape {
+        width: 2%;
+        margin-bottom: 7px;
+    }
+
+    .conteudo {
+        margin-top: 180px;
+        margin-bottom: 180px;
+    }
+
+    .row {
+        margin-right: 0px !important;
+    }
+
+    .icones-menu {
+        width: 51%;
+        color: #f7c8d0;
+    }
+
+    .link-menu {
+        margin-top: 25px;
+        margin-left: 6px;
+        font-size: 13px;
+    }
+
+    .icone-rodape {
+        width: 27px;
+    }
+
+    .icone-moonlander {
+        width: 27px;
+    }
+
+    .conteudo {
+        font-family: "Pacifico", cursive;
+        font-size: 26px;
+    }
+
+    .texto-rodape {
+        font-size: 16px;
+    }
+
+    #logomarca {
+        margin-top: 10px;
+        margin-left: 128px;
+        width: 200%;
+    }
+
+    #topo-texto {
+        font-family: "Pacifico", cursive;
+        margin-top: 3%;
+        margin-left: 50px;
+        font-size: 18px;
+    }
+
+    #topo-segunda-linha {
+        margin-left: 30px;
+        font-size: 18px;
+    }
+
+    #autor-desconhecido {
+        font-family: "DM Sans", sans-serif;
+        margin-left: 159px;
+        font-size: 14px;
+    }
+
+    #desenvolvido-por {
+        margin-top: 28px;
+    }
+}
+
+/* Galaxy Fold e Mobile S */
+@media only screen and (max-width: 320px) {
+    .row {
+        margin-right: 0px !important;
+    }
+
+    .icones-menu {
+        width: 56%;
+        height: 38%;
+        color: #f7c8d0;
+    }
+
+    .link-menu {
+        margin-top: 27px;
+        margin-left: 6px;
+        font-size: 12px;
+    }
+
+    .icone-rodape {
+        width: 100%;
+    }
+
+    .icone-moonlander {
+        width: 10%;
+    }
+
+    .conteudo {
+        font-family: "Pacifico", cursive;
+        font-size: 23px;
+    }
+
+    .texto-rodape {
+        font-size: 20px;
+    }
+
+    #logomarca {
+        margin-top: 15%;
+        margin-left: 193%;
+        margin-bottom: 5%;
+        width: 220%;
+    }
+
+    #topo-texto {
+        font-family: "Pacifico", cursive;
+        margin-top: 3%;
+        margin-left: 43px;
+        font-size: 16px;
+    }
+
+    #topo-segunda-linha {
+        margin-left: 30px;
+        font-size: 16px;
+    }
+
+    #autor-desconhecido {
+        font-family: "DM Sans", sans-serif;
+        margin-left: 129px;
+        font-size: 14px;
+    }
+
+    #desenvolvido-por {
+        margin-top: 28px;
+    }
+}
