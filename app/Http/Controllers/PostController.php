@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class PostController extends Controller
 {
@@ -15,6 +18,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::getPosts();
+
         return view('post.index', [
             'titlePageNavigator' => "Postagens",
             'posts'              => $posts,
@@ -28,7 +32,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.create', [
+            'titlePageNavigator' => "Nova Postagem",
+        ]);
     }
 
     /**
@@ -39,7 +45,40 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data      = $request->all();
+        dd($data);
+        $validator = Post::validator($data);
+
+        if ($validator->fails()) {
+            session()->flash('flash_warning', config('constants.error.constMsgCampsField'));
+            return redirect()->route('post-create')->withErrors($validator)->withInput();
+        } else if (!isset($data['fileupload'])) {
+            session()->flash('flash_warning', config('constants.error.constMsgCampsField'));
+            return redirect()->route('post-create')->withErrors(['fileupload' => 'error'])->withInput();
+        }
+
+        DB::beginTransaction();
+        try {
+            $lastId = Post::getLastId() + 1;
+
+            /*Gravando dados do post*/
+            Post::create([
+                "title"     => $data['title'],
+                'body'      => $data['body'],
+                "slug"      => $data['slug'],
+                'active'    => true,
+                'author_id' => auth()->user()->id,
+            ]);
+
+            DB::commit();
+            session()->flash('flash_success', config('constants.success.constMsgSave'));
+            return redirect()->route('post-index');
+        } catch (Exception $e) {
+            DB::rollback();
+            Log::error('Erro ao criar nova postagem. Detalhes: ' . $e->getMessage());
+            session()->flash('flash_error', config('constants.error.constMsgErrorSave'));
+            return redirect()->route('post-create')->withInput();
+        }
     }
 
     /**
@@ -61,7 +100,12 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+
+        return view('post.edit', [
+            'titlePageNavigator' => "Editar Postagem",
+            'post'               => $post,
+        ]);
     }
 
     /**

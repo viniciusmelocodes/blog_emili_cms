@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\EbookDownloadController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\PostController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -37,12 +38,23 @@ Route::prefix('receitas-doces')->group(function () {
     Route::get('/meuebook/{email}', [EbookDownloadController::class, 'fazerDownload'])->name('lead_fazer_download_meu_ebook');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', function () {
+        $countPosts = Post::getCountPosts();
 
-Route::prefix('postagens')->group(function () {
-    Route::get('/', [PostController::class, 'index'])->middleware(['auth'])->name('index-posts');
+        return view('dashboard', [
+            'countPosts' => $countPosts,
+        ]);
+    })->name('dashboard');
+
+    Route::prefix('postagens')->group(function () {
+        Route::get('/', [PostController::class, 'index'])->name('post-index');
+        Route::get('/create', [PostController::class, 'create'])->name('post-create');
+        Route::get('/edit/{postId}', [PostController::class, 'edit'])->name('post-edit');
+        Route::post('/store', [PostController::class, 'store'])->name('post-store');
+        Route::put('/update/{postId}', [PostController::class, 'update'])->name('post-update');
+        Route::delete('/delete/{postId}', [PostController::class, 'delete'])->name('post-delete');
+    });
 });
 
 require __DIR__ . '/auth.php';
