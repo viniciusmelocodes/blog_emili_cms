@@ -37,7 +37,12 @@ class RegisteredUserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'token_registro' => ['required'],
         ]);
+
+        if ($request->input('token_registro') != 'blog@123456') {
+            return back()->withErrors(['token_registro' => 'Token de registro inválido']);
+        }
 
         $user = User::create([
             'name' => $request->name,

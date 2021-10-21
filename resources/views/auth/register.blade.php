@@ -45,6 +45,13 @@
                                 name="password_confirmation" required />
             </div>
 
+            <!-- Token registro -->
+            <div class="mt-4">
+                <x-label for="token_registro" value="Token Registro" />
+
+                <x-input id="token_registro" class="block mt-1 w-full" type="text" name="token_registro" required />
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}

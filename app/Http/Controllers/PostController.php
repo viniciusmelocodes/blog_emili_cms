@@ -45,17 +45,21 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $data      = $request->all();
-        dd($data);
-        $validator = Post::validator($data);
+        $request->validate([
+            'title' => 'required|min:5|max:100',
+            'body'  => 'required|min:5|max:8000',
+            'slug'  => 'required|min:5|max:15',
+        ]);
 
-        if ($validator->fails()) {
-            session()->flash('flash_warning', config('constants.error.constMsgCampsField'));
-            return redirect()->route('post-create')->withErrors($validator)->withInput();
-        } else if (!isset($data['fileupload'])) {
-            session()->flash('flash_warning', config('constants.error.constMsgCampsField'));
-            return redirect()->route('post-create')->withErrors(['fileupload' => 'error'])->withInput();
-        }
+        $data = $request->all();
+        // $validator = Post::validator($data);
+
+        // return response()->json($validator->fails());
+
+        // if ($validator->fails()) {
+        //     session()->flash('flash_warning', config('constants.error.constMsgCampsField'));
+        //     return redirect()->route('post-create')->withErrors($validator)->withInput();
+        // }
 
         DB::beginTransaction();
         try {
