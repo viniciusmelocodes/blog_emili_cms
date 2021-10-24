@@ -1,0 +1,20 @@
+{
+  "name": "blog_emili_cms",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Vinicius Melo <viniciusldemelo@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/viniciusmelocodes/blog_emili_cms",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "toastr": "^2.1.3"
+  }
+}

@@ -28,9 +28,8 @@
                     <table id="posts-datatable" class="stripe responsive">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Título</th>
                                 <th>Slug</th>
+                                <th>Título</th>
                                 <th>Data Criação</th>
                                 <th>Data Atualização</th>
                                 <th width="150px">Ações</th>
@@ -39,9 +38,8 @@
                         <tbody>
                             @foreach($posts as $post)
                             <tr>
-                                <td>{{ $post->id }}</td>
-                                <td>{{ $post->title }}</td>
                                 <td>{{ $post->slug }}</td>
+                                <td>{{ $post->title }}</td>
                                 <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('d/m/Y H:i:s') }}
                                 <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->updated_at)->format('d/m/Y H:i:s') }}
                                 <td>
@@ -62,9 +60,8 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>#</th>
-                                <th>Título</th>
                                 <th>Slug</th>
+                                <th>Título</th>
                                 <th>Data Criação</th>
                                 <th>Data Atualização</th>
                                 <th width="150px">Ações</th>

@@ -45,43 +45,28 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|min:5|max:100',
-            'body'  => 'required|min:5|max:8000',
-            'slug'  => 'required|min:5|max:15',
-        ]);
-
         $data = $request->all();
-        // $validator = Post::validator($data);
-
-        // return response()->json($validator->fails());
-
-        // if ($validator->fails()) {
-        //     session()->flash('flash_warning', config('constants.error.constMsgCampsField'));
-        //     return redirect()->route('post-create')->withErrors($validator)->withInput();
-        // }
 
         DB::beginTransaction();
         try {
             $lastId = Post::getLastId() + 1;
 
-            /*Gravando dados do post*/
+            /* Nova postagem */
             Post::create([
+                'author_id' => auth()->user()->id,
                 "title"     => $data['title'],
                 'body'      => $data['body'],
                 "slug"      => $data['slug'],
                 'active'    => true,
-                'author_id' => auth()->user()->id,
             ]);
 
             DB::commit();
-            session()->flash('flash_success', config('constants.success.constMsgSave'));
-            return redirect()->route('post-index');
+            Log::info('Nova postagem salva com sucesso.');
+            return response('Postagem salva com sucesso');
         } catch (Exception $e) {
             DB::rollback();
             Log::error('Erro ao criar nova postagem. Detalhes: ' . $e->getMessage());
-            session()->flash('flash_error', config('constants.error.constMsgErrorSave'));
-            return redirect()->route('post-create')->withInput();
+            return response('Erro ao criar nova postagem. Detalhes: ' . $e->getMessage(), 500);
         }
     }
 
@@ -121,7 +106,27 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dados = $request->all();
+
+        DB::beginTransaction();
+        try {
+            /* Atualizando postagem */
+            $post = Post::find($id);
+
+            $post->title = $dados['title'];
+            $post->slug  = $dados['slug'];
+            $post->body  = $dados['body'];
+
+            $post->save();
+
+            DB::commit();
+            Log::info('Postagem atualizada com sucesso.');
+            return response('Postagem atualizada com sucesso');
+        } catch (Exception $e) {
+            DB::rollback();
+            Log::error('Erro ao atualizar postagem. Detalhes: ' . $e->getMessage());
+            return response('Erro ao atualizar postagem. Detalhes: ' . $e->getMessage(), 500);
+        }
     }
 
     /**
@@ -132,6 +137,20 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::beginTransaction();
+        try {
+            /* Excluindo postagem */
+            $post = Post::find($id);
+
+            $post->delete();
+
+            DB::commit();
+            Log::info('Postagem excluída com sucesso.');
+            return response('Postagem excluída com sucesso');
+        } catch (Exception $e) {
+            DB::rollback();
+            Log::error('Erro ao excluir postagem. Detalhes: ' . $e->getMessage());
+            return response('Erro ao excluir postagem. Detalhes: ' . $e->getMessage(), 500);
+        }
     }
 }

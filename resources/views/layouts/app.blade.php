@@ -17,6 +17,9 @@
     <!-- CSS DataTables -->
     <link rel="stylesheet" href="{{ asset('assets/datatables.net-dt/css/jquery.dataTables.css') }}">
 
+    <!-- Toastr -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/toastr/toastr.min.css') }}">
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -29,6 +32,9 @@
 
     <!-- CKEditor -->
     <script src="{{ asset('assets/@ckeditor/ckeditor5-build-classic/build/ckeditor.js') }}"></script>
+
+    <!-- Toastr -->
+    <script src="{{ asset('assets/toastr/toastr.min.js') }}"></script>
 </head>
 
 <body class="font-sans antialiased">
@@ -50,6 +56,26 @@
 
     <!-- Scripts JS -->
     @stack('scripts-js')
+
+    <script>
+        $(function(){
+            @if(Session::has('success'))
+                toastr.success("{{ Session::get('success') }}");
+            @endif
+    
+            @if(Session::has('info'))
+                toastr.info("{{ Session::get('info') }}");
+            @endif
+    
+            @if(Session::has('warning'))
+                toastr.warning("{{ Session::get('warning') }}");
+            @endif
+    
+            @if(Session::has('error'))
+                toastr.error("{{ Session::get('error') }}");
+            @endif
+        });
+    </script>
 </body>
 
 </html>
