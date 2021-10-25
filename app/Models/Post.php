@@ -18,27 +18,12 @@ class Post extends Model
         'active',
     ];
 
-    /**
-     * Regras para postagens
-     *
-     * @param array $data = array passado via POST
-     * @return boolean
-     */
-    protected static function validator($data)
-    {
-        return Validator::make($data, [
-            'title' => 'required|min:5|max:191',
-            'body'  => 'required|min:5',
-            'slug'  => 'required|min:5|max:191|unique',
-        ]);
-    }
-
-    protected static function getPosts()
+    protected static function getPostsActives()
     {
         return Post::select('id', 'title', 'body', 'slug', 'active', 'created_at', 'updated_at')->where('author_id', auth()->user()->id)->where('active', true)->get();
     }
 
-    protected static function getCountPosts()
+    protected static function getCountPostsActives()
     {
         return Post::where('author_id', auth()->user()->id)->where('active', true)->count();
     }

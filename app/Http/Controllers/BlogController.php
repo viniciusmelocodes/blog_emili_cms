@@ -2,83 +2,69 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use App\Notifications\EncomendaEmili;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 class BlogController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Página principal
      *
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('blog.inicio.inicio');
+        $postagens = Post::select('*')->where('active', true)->orderBy('updated_at', 'DESC')->get();
+
+        return view('blog.inicio.inicio', [
+            'titlePageNavigator' => 'Início | ' . env('APP_NAME'),
+            'postagens'          => $postagens,
+        ]);
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
+     * Get Postagem
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function getPostagem($slug)
     {
-        //
+        $postagem = Post::select('*')->where([['slug', $slug], ['active', true]])->get()->first();
+
+        if (!isset($postagem)) {
+            abort(404);
+        }
+
+        return view('blog.postagem.postagem', [
+            'titlePageNavigator' => $postagem->title . ' | ' . env('APP_NAME'),
+            'postagem'           => $postagem,
+        ]);
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Get Postagem
      *
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function sendEncomendaEmili(Request $request)
     {
-        //
-    }
+        $data = $request->all();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+        $mensagem = 'Nova encomenda => Cliente: ' . $data['nome'] .
+            ', E-mail: ' . $data['email'] .
+            ', Nº WhatsApp: ' . $data['telefone'] .
+            ', Forma de pagamento: ' . $data['formaPagamento'] .
+            ', Pedido: ' . $data['pedido'];
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_ENCOMENDAS_ID'))
+            ->route('message', $mensagem)
+            ->notify(new EncomendaEmili());
+
+        return response()->json('Pedido de encomenda enviado com sucesso.');
     }
 }

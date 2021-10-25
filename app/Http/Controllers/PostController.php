@@ -17,7 +17,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::getPosts();
+        $posts = Post::getPostsActives();
 
         return view('post.index', [
             'titlePageNavigator' => "Postagens",
@@ -114,8 +114,8 @@ class PostController extends Controller
             $post = Post::find($id);
 
             $post->title = $dados['title'];
-            $post->slug  = $dados['slug'];
             $post->body  = $dados['body'];
+            $post->slug  = $dados['slug'];
 
             $post->save();
 
@@ -135,22 +135,25 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function desativarPostagem(Request $request)
     {
+        $data = $request->all();
+
         DB::beginTransaction();
         try {
-            /* Excluindo postagem */
-            $post = Post::find($id);
+            /* Desativando postagem */
+            $post         = Post::find($data['id']);
+            $post->active = false;
 
-            $post->delete();
+            $post->save();
 
             DB::commit();
-            Log::info('Postagem excluída com sucesso.');
-            return response('Postagem excluída com sucesso');
+            Log::info('Postagem desativada com sucesso.');
+            return response('Postagem desativada com sucesso');
         } catch (Exception $e) {
             DB::rollback();
-            Log::error('Erro ao excluir postagem. Detalhes: ' . $e->getMessage());
-            return response('Erro ao excluir postagem. Detalhes: ' . $e->getMessage(), 500);
+            Log::error('Erro ao desativar postagem. Detalhes: ' . $e->getMessage());
+            return response('Erro ao desativada postagem. Detalhes: ' . $e->getMessage(), 500);
         }
     }
 }

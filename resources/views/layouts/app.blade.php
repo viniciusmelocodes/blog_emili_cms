@@ -17,6 +17,9 @@
     <!-- CSS DataTables -->
     <link rel="stylesheet" href="{{ asset('assets/datatables.net-dt/css/jquery.dataTables.css') }}">
 
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
+
     <!-- Toastr -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/toastr/toastr.min.css') }}">
 
@@ -27,11 +30,14 @@
     <script src="{{ asset('assets/jquery/jquery.min.js') }}"></script>
 
     <!-- JS DataTables -->
-    <script src="{{ asset('assets/datatables.net/js/jquery.dataTables.js') }}" defer></script>
-    <script src="{{ asset('assets/datatables.net-dt/js/dataTables.dataTables.js') }}" defer></script>
+    <script src="{{ asset('assets/datatables.net/js/jquery.dataTables.min.js') }}" defer></script>
+    <script src="{{ asset('assets/datatables.net-dt/js/dataTables.dataTables.min.js') }}" defer></script>
 
     <!-- CKEditor -->
     <script src="{{ asset('assets/@ckeditor/ckeditor5-build-classic/build/ckeditor.js') }}"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="{{ asset('assets/sweetalert2/sweetalert2.min.js') }}"></script>
 
     <!-- Toastr -->
     <script src="{{ asset('assets/toastr/toastr.min.js') }}"></script>

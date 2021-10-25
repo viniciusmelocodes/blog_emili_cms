@@ -143,7 +143,7 @@
                                         error: function (response) {
                                             Swal.fire({
                                                 title: 'Erro!',
-                                                text: 'Comunique ao administrador sobre esse erro. Contato: viniciusldemelo@gmail.com. Detalhes: ' + response.responseJSON.detalhes,
+                                                text: 'Comunique ao administrador sobre esse erro. Contato: viniciusldemelo@gmail.com. Detalhes: ' + response.responseJSON.message,
                                                 icon: 'error',
                                                 confirmButtonText: 'Fechar'
                                             })              

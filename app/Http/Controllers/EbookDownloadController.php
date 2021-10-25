@@ -30,7 +30,7 @@ class EbookDownloadController extends Controller
 
                 Log::debug('Arquivo PDF entregue ao lead: ' . $email);
 
-                Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_ID', '0'))
+                Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_LEADS_ID', '0'))
                     ->route('message', 'Arquivo PDF entregue ao lead: ' . $email)
                     ->notify(new LeadReady());
 
@@ -43,7 +43,7 @@ class EbookDownloadController extends Controller
                 return view('lead.lead-time-expired');
             }
         } catch (Exception $e) {
-            Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_ID', '0'))
+            Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_LEADS_ID', '0'))
                 ->route('message', 'Erro ao fazer download de e-book. E-mail: ' . $email . '. Detalhes técnicos: ' . $e->getMessage())
                 ->notify(new LeadReady());
 

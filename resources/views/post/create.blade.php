@@ -31,7 +31,8 @@
                             </label>
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                type="text" placeholder="Slug" autocomplete="off" id="slug" name="slug">
+                                type="text" placeholder="Slug" autocomplete="off" id="slug" name="slug"
+                                onblur="formatSlugOnBlur('slug')">
                         </div>
                     </div>
 
@@ -39,9 +40,9 @@
                         <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-slug">
                             Texto para postagem
                         </label>
-                        <div id="editor">
-                            <p class="bodyPostagem"></p>
-                        </div>
+                        <textarea class="ckeditor" name="editor" id="editor" cols="30" rows="10">
+
+                        </textarea>
                     </div>
                 </div>
             </div>
@@ -50,6 +51,7 @@
 
     @push('scripts-js')
     @include('post.create-js')
+    @include('layouts.global-js')
     @endpush
 
 </x-app-layout>

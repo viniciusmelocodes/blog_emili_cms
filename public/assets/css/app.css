@@ -20,17 +20,18 @@ a:active {
     text-decoration: none;
 }
 
+/* Sombra itens do menu */
 .one-edge-shadow {
     -webkit-box-shadow: 0 10px 6px -6px #4b4b4b;
     -moz-box-shadow: 0 10px 6px -6px #4b4b4b;
     box-shadow: 0 10px 6px -6px #4b4b4b;
 }
 
-.texto-menu:hover:before {
+/* .texto-menu:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-}
+} */
 
 .texto-menu:before {
     content: "";

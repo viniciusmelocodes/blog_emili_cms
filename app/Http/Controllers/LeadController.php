@@ -50,7 +50,7 @@ class LeadController extends Controller
                 DB::commit();
 
                 /* Envia dados do lead para canal privado */
-                Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_ID', '0'))
+                Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_LEADS_ID'))
                     ->route('message', 'Lead nome: ' . $data['nome'] . ', e-mail: ' . $email . ', telefone: ' . $data['telefone'])
                     ->notify(new LeadReady());
 
@@ -64,7 +64,7 @@ class LeadController extends Controller
         } catch (Exception $e) {
             DB::rollback();
 
-            Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_ID', '0'))
+            Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_LEADS_ID'))
                 ->route('message', 'Erro ao salvar lead nome: ' . $data['nome'] . ', e-mail: ' . $email . ', telefone: ' . $data['telefone'] . '. Detalhes: ' . $e->getMessage())
                 ->notify(new LeadReady());
 
@@ -98,7 +98,7 @@ class LeadController extends Controller
             DB::commit();
 
             /* Envia dados do lead para canal privado */
-            Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_ID', '0'))
+            Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_LEADS_ID'))
                 ->route('message', 'Lead nome: ' . $data['nome'] . ', e-mail: ' . $email . ', telefone: ' . $data['telefone'])
                 ->notify(new LeadReady());
 
@@ -109,7 +109,7 @@ class LeadController extends Controller
         } catch (Exception $e) {
             DB::rollback();
 
-            Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_ID', '0'))
+            Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_LEADS_ID', '0'))
                 ->route('message', 'Erro ao salvar lead nome: ' . $data['nome'] . ', e-mail: ' . $email . ', telefone: ' . $data['telefone'] . '. Detalhes: ' . $e->getMessage())
                 ->notify(new LeadReady());
 

@@ -6,16 +6,18 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Emili Ananias Confeitaria | Copyright 2021 - Todos os direitos reservados</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <link rel="shortcut icon" href="{{ asset('assets/icon/favicon.ico') }}" />
     <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/font-awesome/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/toastr/toastr.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <script type="text/javascript" src="{{ asset('assets/jquery/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/sweetalert2/sweetalert2.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/toastr/toastr.min.js') }}"></script>
 
     <script>
         if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"viniciusldemelo",utcoffset:"-3"}))};sessionStorage.setItem("_swa","1");
@@ -53,18 +55,18 @@
     <div class="row menu-blog one-edge-shadow">
         <div class="col-3 d-flex justify-content-center texto-menu">
             <img class="icones-menu" src="{{ asset('assets/images/home.webp') }} ">
-            <a class="link-menu" href="#">Início</a>
+            <a class="link-menu" id="menu-inicio" href="/">Início</a>
         </div>
         <div class="col-3 d-flex justify-content-center texto-menu">
             <img class="icones-menu" src="{{ asset('assets/images/sobre.webp') }} ">
-            <a class="link-menu" href="#">Sobre Emili</a>
+            <a class="link-menu" id="menu-sobre-emili" href="/sobre-emili">Sobre Emili</a>
         </div>
         <div class="col-3 d-flex justify-content-center texto-menu">
             <img class="icones-menu" src="{{ asset('assets/images/fazer-encomenda.webp') }} ">
-            <a class="link-menu" href="#">Fazer encomenda</a>
+            <a class="link-menu" id="menu-fazer-encomenda" href="/fazer-encomenda">Fazer encomenda</a>
         </div>
         <div class="col-3 d-flex justify-content-center texto-menu">
             <img class="icones-menu" src="{{ asset('assets/images/aprenda-com-a-emili.webp') }} ">
-            <a class="link-menu" href="#">Aprenda com a Emili</a>
+            <a class="link-menu" id="menu-aprenda-com-a-emili" href="/aprenda-com-a-emili">Aprenda com a Emili</a>
         </div>
     </div>

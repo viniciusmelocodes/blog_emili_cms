@@ -2,12 +2,29 @@
 
 @section('content')
 
-<div class="row conteudo-blog">
-    <div class="col-12">
+<div class="row conteudo-blog" style="padding-top: 30px; padding-bottom: 30px">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <h2>Posts mais recentes:</h2>
         {{-- <img id="icone-sobre-emili" src="{{ asset('assets/images/sobre-emili.webp') }} "> --}}
-        <center>
-            <p class="conteudo">Conteúdos gerais</p>
-        </center>
+        @foreach ($postagens as $postagem)
+            <div class="card" style="margin-bottom: 30px">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="/{{ $postagem->slug }}">
+                            {{ $postagem->title }}
+                        </a>
+                    </h5>
+                    <p class="card-text">
+                        Publicado em: {{ date_format($postagem->created_at, 'd/m/Y H:i:s') }} 
+                    </p>
+                </div>
+            </div>
+        @endforeach
+    </div>
+    <div class="col-2"></div>
+    <div class="container">
+
     </div>
 </div>
 

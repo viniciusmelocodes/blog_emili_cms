@@ -1,5 +1,5 @@
 <script>
-    ClassicEditor
+	ClassicEditor
 		.create( document.querySelector( '#editor' ) )
 		.then( editor => {
 			window.editor = editor;
@@ -8,9 +8,9 @@
 			toastr.error( 'Erro ao inicializar o editor de texto ckeditor. Detalhe: ' + error);
 		} );
 
-    $(function() {
+    // $(function() {
 
-    })
+    // })
 
     function salvar() {
 		$.ajaxSetup({
@@ -19,9 +19,12 @@
 			}
 		});
 
-		let id = $("#id").val()
 		let title = $("#title").val()
+		
+		// Slug
 		let slug = $("#slug").val()
+		slug = formatSlug(slug)
+
 		let body = $(".ck-content")[0].innerHTML
 
 		if (title == '' || title == undefined || title.length < 5 || title.length > 100) {
@@ -30,7 +33,7 @@
 			return false
 		}
 
-		if (slug == '' || slug == undefined || slug.length < 5 || slug.length > 15) {
+		if (slug == '' || slug == undefined || slug.length < 5 || slug.length > 70) {
 			toastr.warning("Slug inválido.")
 			$("#slug").focus()
 			return false
@@ -46,11 +49,15 @@
 
 		$.ajax({
 			type: "PUT",
-			url: "{{ route('post-update', id) }}",
+			url: "{{ route('post-update', $post->id) }}",
 			data: data,
 			success: function(response)
 			{
 				toastr.success(response)
+				
+				setTimeout(() => {
+					window.location.href = '/postagens'
+				}, 3000);
 			},
 			error: function (response)
 			{

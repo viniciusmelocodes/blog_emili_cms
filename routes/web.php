@@ -23,6 +23,26 @@ Auth::routes();
 
 Route::get('/', [BlogController::class, 'index']);
 
+Route::get('/sobre-emili', function () {
+    return view('blog.sobre-emili.sobre-emili', [
+        'titlePageNavigator' => 'Sobre Emili | ' . env('APP_NAME'),
+    ]);
+});
+
+Route::get('/fazer-encomenda', function () {
+    return view('blog.fazer-encomenda.fazer-encomenda', [
+        'titlePageNavigator' => 'Fazer encomenda | ' . env('APP_NAME'),
+    ]);
+});
+
+Route::get('/aprenda-com-a-emili', function () {
+    return view('blog.aprenda-com-a-emili.aprenda-com-a-emili', [
+        'titlePageNavigator' => 'Aprenda com a Emili | ' . env('APP_NAME'),
+    ]);
+});
+
+Route::post('/enviar-pedido', [BlogController::class, 'sendEncomendaEmili'])->name('enviar-pedido-encomenda');
+
 Route::get('/operacao_cakes', function () {
     return redirect()->away('https://lp.egoi.page/1e2e5aCS/OperacaoCakes');
 });
@@ -40,10 +60,10 @@ Route::prefix('receitas-doces')->group(function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', function () {
-        $countPosts = Post::getCountPosts();
+        $countPostsActives = Post::getCountPostsActives();
 
         return view('dashboard', [
-            'countPosts' => $countPosts,
+            'countPostsActives' => $countPostsActives,
         ]);
     })->name('dashboard');
 
@@ -53,8 +73,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/edit/{postId}', [PostController::class, 'edit'])->name('post-edit');
         Route::post('/store', [PostController::class, 'store'])->name('post-store');
         Route::put('/update/{postId}', [PostController::class, 'update'])->name('post-update');
-        Route::delete('/delete/{postId}', [PostController::class, 'delete'])->name('post-delete');
+        Route::get('/desativar', [PostController::class, 'desativarPostagem'])->name('post-desativar');
     });
 });
+
+Route::get('/{slug}', [BlogController::class, 'getPostagem']);
 
 require __DIR__ . '/auth.php';

@@ -9,7 +9,6 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <input type="hidden" name="id" id="id" value="{{ $post->id }}">
                     <div class="flex mb-4">
                         <div class="w-1/2 h-12">
                             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
@@ -32,7 +31,7 @@
                             </label>
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                type="text" placeholder="Slug" autocomplete="off" id="slug" name="slug" value="{{ $post->slug }}">
+                                type="text" placeholder="Slug" autocomplete="off" id="slug" name="slug" value="{{ $post->slug }}" onblur="formatSlugOnBlur('slug')">
                         </div>
                     </div>
 
@@ -51,6 +50,7 @@
 
     @push('scripts-js')
     @include('post.edit-js')
+    @include('layouts.global-js')
     @endpush
 
 </x-app-layout>

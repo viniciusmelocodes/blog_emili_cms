@@ -25,14 +25,14 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <table id="posts-datatable" class="stripe responsive">
+                    <table id="posts-tabela" class="stripe responsive">
                         <thead>
                             <tr>
                                 <th>Slug</th>
                                 <th>Título</th>
                                 <th>Data Criação</th>
                                 <th>Data Atualização</th>
-                                <th width="150px">Ações</th>
+                                <th width="170px">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,9 +50,9 @@
                                         Editar
                                     </button>
                                     <button
-                                        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
-                                        type="button" onclick="excluirPostagem({{ $post->id }})">
-                                        Excluir
+                                        class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full"
+                                        type="button" onclick="desativarPostagem('{{ $post->title }}', {{ $post->id }})">
+                                        Desativar
                                     </button>
                                 </td>
                             </tr>
@@ -64,7 +64,7 @@
                                 <th>Título</th>
                                 <th>Data Criação</th>
                                 <th>Data Atualização</th>
-                                <th width="150px">Ações</th>
+                                <th width="170px">Ações</th>
                             </tr>
                         </tfoot>
                     </table>
