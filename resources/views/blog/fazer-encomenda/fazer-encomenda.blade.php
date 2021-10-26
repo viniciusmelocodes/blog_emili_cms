@@ -3,8 +3,8 @@
 @section('content')
 
 <div class="row conteudo-blog" style="padding-top: 50px">
-    <div class="col-4"></div>
-    <div class="col-4">
+    <div class="col-2"></div>
+    <div class="col-8">
         <form>
             <div class="form-group">
                 <label id="labelNomeCompleto" for="nome_completo" class="col-auto col-form-label">Nome
@@ -52,7 +52,7 @@
             </button>
         </center>
     </div>
-    <div class="col-4"></div>
+    <div class="col-2"></div>
 </div>
 
 @endsection
