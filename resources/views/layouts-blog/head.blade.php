@@ -45,7 +45,7 @@
         <div class="col-3">
             <img id="logomarca" src="{{ asset('assets/images/logomarca.webp') }}" onclick="irPraHome()">
         </div>
-        <div class="col-14 col-sm-14 col-md-14 col-lg-14 col-xl-14" id="topo-texto">
+        <div class="col-9" id="topo-texto">
             <p>"A confeitaria transformou a minha</p>
             <p id="topo-segunda-linha">vida e eu quero transformar a sua."</p>
             <p id="autor-desconhecido">Autor desconhecido</p>

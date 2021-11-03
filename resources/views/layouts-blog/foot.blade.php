@@ -22,8 +22,8 @@
         <div class="row" id="desenvolvido-por">
             <div class="col-12 texto-rodape">
                 Desenvolvido por
-                <a class="link-icone-rodape" href="#"><img class="icone-moonlander"
-                        src="{{ asset('assets/images/logo-moonlander.webp') }}"></a>
+                <a class="link-icone-rodape" href="https://www.instagram.com/moonlander.mkt/"><img
+                        class="icone-moonlander" src="{{ asset('assets/images/logo-moonlander.webp') }}"></a>
             </div>
         </div>
     </center>
