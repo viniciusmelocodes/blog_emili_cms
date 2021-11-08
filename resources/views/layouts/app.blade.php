@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
+    <meta name="norton-safeweb-site-verification" content="-du9urh2kz3l-yax6fspc30p3vcps9ugaoc9awy3crjt4n-flxroqojgnqbg5epxzhe-b5zyhi3f5lakn2awavyuqoi16iyy5vh865u0y49pmvqt9xd7lid3p3zq49g4" />
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
