@@ -26,6 +26,13 @@
                         class="icone-moonlander" src="{{ asset('assets/images/logo-moonlander.webp') }}"></a>
             </div>
         </div>
+        <div class="selos">
+            <h3 class="t">Segurança</h3>
+            <a href="https://www.google.com/safebrowsing/diagnostic?site=www.emiliananiasconfeitaria.com.br" rel="noreferrer" target="_blank" title="Google Safe Browsing" class="selo-google">
+            <img data-src="https://cdn.sistemawbuy.com.br/img/selos/google.png" alt="Google Safe Browsing" class="img-fluid lazyloaded" src="https://cdn.sistemawbuy.com.br/img/selos/google.png"></a>
+            <a href="https://safeweb.norton.com/report/show?url=www.emiliananiasconfeitaria.com.br" rel="noreferrer" target="_blank" title="Norton Safe Web" class="selo-norton">
+            <img data-src="https://cdn.sistemawbuy.com.br/img/selos/norton.png" alt="Norton Safe Web" class="img-fluid lazyloaded" src="https://cdn.sistemawbuy.com.br/img/selos/norton.png"></a>
+        </div>
     </center>
 </footer>
 
