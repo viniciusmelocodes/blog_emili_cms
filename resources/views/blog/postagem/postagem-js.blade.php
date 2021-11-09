@@ -1,7 +1,7 @@
 <script type="text/javascript" defer>
     $(document).ready(function() {           
         document.title = '{!! $titlePageNavigator !!}'
-        $("#body").append('{!! $postagem->body !!}')
+        $("#body").html(`{!! $postagem->body !!}`)
     });
 
     function irPraHome() {

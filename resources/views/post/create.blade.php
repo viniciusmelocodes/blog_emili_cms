@@ -37,12 +37,10 @@
                     </div>
 
                     <div class="flex flex-col">
-                        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-slug">
+                        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2">
                             Texto para postagem
                         </label>
-                        <textarea class="ckeditor" name="editor" id="editor" cols="30" rows="10">
-
-                        </textarea>
+                        <textarea id="tinymce"></textarea>
                     </div>
                 </div>
             </div>

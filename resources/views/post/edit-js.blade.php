@@ -1,16 +1,47 @@
 <script>
-	ClassicEditor
-		.create( document.querySelector( '#editor' ) )
-		.then( editor => {
-			window.editor = editor;
-		} )
-		.catch( error => {
-			toastr.error( 'Erro ao inicializar o editor de texto ckeditor. Detalhe: ' + error);
-		} );
+	tinymce.init({
+		selector: 'textarea#tinymce',
+		image_class_list: [
+            {title: 'img-responsive', value: 'img-responsive'},
+		],
+		height: 500,
+		setup: function (editor) {
+			editor.on('init change', function () {
+				editor.save();
+			});
+		},
+		plugins: [
+			"advlist autolink lists link image charmap print preview anchor",
+			"searchreplace visualblocks code fullscreen",
+			"insertdatetime media table paste"
+		],
+		toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image ",
 
-    // $(function() {
+		image_title: true,
+		automatic_uploads: true,
+		images_upload_url: '{{ route('upload-imagem-postagem') }}',
+		file_picker_types: 'image',
+		file_picker_callback: function(cb, value, meta) {
+			var input = document.createElement('input');
+			input.setAttribute('type', 'file');
+			input.setAttribute('accept', 'image/*');
+			input.onchange = function() {
+				var file = this.files[0];
 
-    // })
+				var reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onload = function () {
+					var id = 'blobid' + (new Date()).getTime();
+					var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+					var base64 = reader.result.split(',')[1];
+					var blobInfo = blobCache.create(id, file, base64);
+					blobCache.add(blobInfo);
+					cb(blobInfo.blobUri(), { title: file.name });
+				};
+			};
+			input.click();
+		}
+	});
 
     function salvar() {
 		$.ajaxSetup({
@@ -25,22 +56,22 @@
 		let slug = $("#slug").val()
 		slug = formatSlug(slug)
 
-		let body = $(".ck-content")[0].innerHTML
+		let body = tinyMCE.get('tinymce').getContent()
 
-		if (title == '' || title == undefined || title.length < 5 || title.length > 100) {
-			toastr.warning("T√≠tulo inv√°lido.")
+		if (title == '' || title.length < 5 || title.length > 100) {
+			toastr.warning("TÌtulo inv·lido.")
 			$("#title").focus()
 			return false
 		}
 
-		if (slug == '' || slug == undefined || slug.length < 5 || slug.length > 70) {
-			toastr.warning("Slug inv√°lido.")
+		if (slug == '' || slug.length < 5 || slug.length > 70) {
+			toastr.warning("Slug inv·lido.")
 			$("#slug").focus()
 			return false
 		}
 
-		if (body == '<p><br data-cke-filler=\"true\"></p>' || body == undefined || body.length < 12 || body.length > 8000) {
-			toastr.warning("Texto inv√°lido.")
+		if (body == '') {
+			toastr.warning("Texto inv·lido.")
 			$(".ck-content").focus()
 			return false
 		}

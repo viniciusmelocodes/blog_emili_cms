@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
-    <meta name="norton-safeweb-site-verification" content="-du9urh2kz3l-yax6fspc30p3vcps9ugaoc9awy3crjt4n-flxroqojgnqbg5epxzhe-b5zyhi3f5lakn2awavyuqoi16iyy5vh865u0y49pmvqt9xd7lid3p3zq49g4" />
+
+    <meta name="norton-safeweb-site-verification"
+        content="-du9urh2kz3l-yax6fspc30p3vcps9ugaoc9awy3crjt4n-flxroqojgnqbg5epxzhe-b5zyhi3f5lakn2awavyuqoi16iyy5vh865u0y49pmvqt9xd7lid3p3zq49g4" />
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -35,8 +36,8 @@
     <script src="{{ asset('assets/datatables.net/js/jquery.dataTables.min.js') }}" defer></script>
     <script src="{{ asset('assets/datatables.net-dt/js/dataTables.dataTables.min.js') }}" defer></script>
 
-    <!-- CKEditor -->
-    <script src="{{ asset('assets/@ckeditor/ckeditor5-build-classic/build/ckeditor.js') }}"></script>
+    <!-- TinyMCE -->
+    <script src="{!! url('assets/tinymce/js/tinymce/tinymce.min.js') !!}"></script>
 
     <!-- SweetAlert2 -->
     <script src="{{ asset('assets/sweetalert2/sweetalert2.min.js') }}"></script>

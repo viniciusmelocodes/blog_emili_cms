@@ -29,10 +29,10 @@
                         <thead>
                             <tr>
                                 <th>Slug</th>
-                                <th>Título</th>
+                                <th>Tí­tulo</th>
                                 <th>Data Criação</th>
                                 <th>Data Atualização</th>
-                                <th width="170px">Ações</th>
+                                <th width="290px">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,6 +50,12 @@
                                         Editar
                                     </button>
                                     <button
+                                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full"
+                                        type="button"
+                                        onclick="window.open('{{ route('post-view', $post->slug) }}')">
+                                        Visualizar
+                                    </button>
+                                    <button
                                         class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full"
                                         type="button" onclick="desativarPostagem('{{ $post->title }}', {{ $post->id }})">
                                         Desativar
@@ -61,10 +67,10 @@
                         <tfoot>
                             <tr>
                                 <th>Slug</th>
-                                <th>Título</th>
+                                <th>Tí­tulo</th>
                                 <th>Data Criação</th>
                                 <th>Data Atualização</th>
-                                <th width="170px">Ações</th>
+                                <th width="290px">Ações</th>
                             </tr>
                         </tfoot>
                     </table>

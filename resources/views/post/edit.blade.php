@@ -39,7 +39,7 @@
                         <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-slug">
                             Texto para postagem
                         </label>
-                        <textarea class="ckeditor" name="editor" id="editor" cols="30" rows="10">
+                        <textarea id="tinymce">
                             {{ $post->body }}
                         </textarea>
                     </div>

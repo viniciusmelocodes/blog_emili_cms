@@ -80,7 +80,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::put('/update/{postId}', [PostController::class, 'update'])->name('post-update');
         Route::get('/desativar', [PostController::class, 'desativarPostagem'])->name('post-desativar');
     });
+
+    Route::get('/visualizar/{slug}', [PostController::class, 'view'])->name('post-view');
 });
+
+Route::post('/upload', [PostController::class, 'upload'])->name('upload-imagem-postagem');
 
 Route::get('/{slug}', [BlogController::class, 'getPostagem']);
 

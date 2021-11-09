@@ -71,17 +71,6 @@ class PostController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -129,6 +118,20 @@ class PostController extends Controller
         }
     }
 
+    public function view($slug)
+    {
+        $postagem = Post::select('*')->where([['slug', $slug], ['active', true]])->get()->first();
+
+        if (!isset($postagem)) {
+            abort(404);
+        }
+
+        return view('blog.postagem.postagem', [
+            'titlePageNavigator' => $postagem->title . ' | ' . env('APP_NAME'),
+            'postagem'           => $postagem,
+        ]);
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -154,6 +157,18 @@ class PostController extends Controller
             DB::rollback();
             Log::error('Erro ao desativar postagem. Detalhes: ' . $e->getMessage());
             return response('Erro ao desativada postagem. Detalhes: ' . $e->getMessage(), 500);
+        }
+    }
+
+    public function upload(Request $request)
+    {
+        try {
+            $fileName = $request->file('file')->getClientOriginalName();
+            $path     = $request->file('file')->storePubliclyAs('public/imagens', $fileName);
+            return response()->json(['location' => public_path($path)]);
+        } catch (\Throwable $th) {
+            Log::error($th->getMessage());
+            return response()->json($th->getMessage());
         }
     }
 }
