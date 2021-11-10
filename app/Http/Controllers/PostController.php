@@ -165,6 +165,7 @@ class PostController extends Controller
         try {
             $fileName = $request->file('file')->getClientOriginalName();
             $path     = $request->file('file')->storePubliclyAs('public/imagens', $fileName);
+            $path     = str_replace('public', 'storage', $path);
 
             return response()->json(['location' => url($path)]);
 
