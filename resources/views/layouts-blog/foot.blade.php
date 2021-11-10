@@ -5,15 +5,15 @@
             <div class="col-3"></div>
 
             <div class="col-2 justify-content-center">
-                <a class="link-icone-rodape" href="#"><img class="icone-rodape"
+                <a class="link-icone-rodape" href="https://www.instagram.com/emili.ananias.confeitaria/" target="_blank"><img class="icone-rodape"
                         src="{{ asset('assets/images/instagram.webp') }}"></a>
             </div>
             <div class="col-2 justify-content-center">
-                <a class="link-icone-rodape" href="#"><img class="icone-rodape"
+                <a class="link-icone-rodape" href="https://www.facebook.com/emiliananiasconfeitaria/" target="_blank"><img class="icone-rodape"
                         src="{{ asset('assets/images/facebook.webp') }}"></a>
             </div>
             <div class="col-2 justify-content-center">
-                <a class="link-icone-rodape" href="#"><img class="icone-rodape"
+                <a class="link-icone-rodape" href="mailto:faleconosco@emiliananiasconfeitaria.com.br"><img class="icone-rodape"
                         src="{{ asset('assets/images/email.webp') }}"></a>
             </div>
 

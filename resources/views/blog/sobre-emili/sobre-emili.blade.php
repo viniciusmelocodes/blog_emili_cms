@@ -7,6 +7,7 @@
     <div class="col-6">
         <center>
             <h3>Sobre Emili</h3>
+            <img id="icone-sobre-emili" src="{{ asset('assets/images/sobre-emili.webp') }}" width="40%">
         </center>
     </div>
     <div class="col-3"></div>

@@ -5,8 +5,7 @@
 <div class="row conteudo-blog" style="padding-top: 30px; padding-bottom: 30px">
     <div class="col-2"></div>
     <div class="col-8">
-        <h2>Posts mais recentes:</h2>
-        {{-- <img id="icone-sobre-emili" src="{{ asset('assets/images/sobre-emili.webp') }} "> --}}
+        <h2>Posts mais recentes:</h2>        
         @foreach ($postagens as $postagem)
             <div class="card" style="margin-bottom: 30px">
                 <div class="card-body">

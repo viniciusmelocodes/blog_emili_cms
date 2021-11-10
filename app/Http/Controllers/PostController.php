@@ -133,7 +133,7 @@ class PostController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Disable the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -165,7 +165,9 @@ class PostController extends Controller
         try {
             $fileName = $request->file('file')->getClientOriginalName();
             $path     = $request->file('file')->storePubliclyAs('public/imagens', $fileName);
-            return response()->json(['location' => public_path($path)]);
+
+            return response()->json(['location' => url($path)]);
+
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return response()->json($th->getMessage());
