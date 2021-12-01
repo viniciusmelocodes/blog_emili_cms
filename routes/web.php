@@ -52,6 +52,12 @@ Route::get('/operacao_cakes', function () {
     return redirect()->away('https://lp.egoi.page/1e2e5aCS/OperacaoCakes');
 });
 
+Route::get('/operacao-cakes', function () {
+    return view('operacaocakes', [
+        'titlePageNavigator' => 'Operação Cakes',
+    ]);
+});
+
 Route::get('/curso_bolo_gelado', function () {
     return view('pagina-vendas.index');
 });
