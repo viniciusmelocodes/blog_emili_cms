@@ -25,7 +25,9 @@
         }
 
         .row {
-            color: white
+            color: white;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         .texto-centralizado {
@@ -38,7 +40,7 @@
         }
 
         .imagem-mobile {
-            width: 80%
+            width: 100%
         }
 
         .margem-topo {
@@ -78,50 +80,43 @@
     </div>
 
     <div class="row texto-centralizado margem-topo">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-12">
             <h3>
                 <b>VENHA PARTICIPAR COMIGO DURANTE 3 DIAS DE UMA MARATONA DE LIVES</b>
             </h3>
         </div>
-        <div class="col-2"></div>
     </div>
     <div class="row texto-centralizado margem-topo">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-12">
             <h5>
                 Se você está pronta para viver uma vida que sempre quis e quer ter mais tempo e dinheiro para você e
                 sua
                 família, então venha comigo nessa jornada!
             </h5>
         </div>
-        <div class="col-2"></div>
     </div>
 
     <div class="row texto-centralizado margem-topo">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-12">
             <iframe class="video-emili" height="100%" width="100%" src="https://www.youtube.com/embed/cP0iF0-OQ-4"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
         </div>
-        <div class="col-2"></div>
     </div>
 
     <div class="row margem-topo margem-topo">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-12">
             <div class="mb-3 row">
-                <input type="text" class="form-control" id="nome" placeholder="Nome completo">
+                <input type="text" class="form-control form-control-lg" id="nome" placeholder="Nome completo">
             </div>
             <div class="mb-3 row">
-                <input type="email" class="form-control" id="email" placeholder="Seu melhor e-mail">
+                <input type="email" class="form-control form-control-lg" id="email" placeholder="Seu melhor e-mail">
             </div>
             <div class="mb-3 row">
-                <input type="text" class="form-control" id="telefone" data-inputmask="'mask': '(99) 99999-9999'"
-                    placeholder="Anote aqui o seu número">
+                <input type="text" class="form-control form-control-lg" id="telefone" data-inputmask="'mask': '(99) 99999-9999'"
+                    placeholder="Anote aqui o seu número de WhatsApp">
             </div>
 
             <div class="mb-3 row">
@@ -134,7 +129,6 @@
                 </button>
             </div>
         </div>
-        <div class="col-2"></div>
     </div>
 
     <div class="row justify-content-center margem-topo">
@@ -142,8 +136,7 @@
     </div>
 
     <div class="row texto-centralizado margem-topo">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-12">
             <h3>
                 <b>
                     <u>
@@ -152,42 +145,37 @@
                 </b>
             </h3>
         </div>
-        <div class="col-2"></div>
     </div>
 
     <div class="row texto-centralizado margem-topo">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-12">
             <h5>
                 <b>
                     MONTAGEM DE TORTA NA TAÇA, IDEIA INCRÍVEL PARA VOCÊ ARRASAR NO NATAL OU EM QUALQUER OCASIÃO
                 </b>
             </h5>
         </div>
-        <div class="col-2"></div>
     </div>
 
     <div class="row margem-topo margem-rodape">
-        <div class="col-2"></div>
-        <div class="col-8">
-            <h6>
+        <div class="col-12">
+            <h6 class="margem-topo">
                 <b>Dia 14/12</b> (terça-feira) às 20:00 - <b>Descontração da Receita da Massa e da Compota de
                     Frutas.</b>
             </h6>
-            <h6>
+            <h6 class="margem-topo">
                 <b>Dia 15/12</b> (quarta-feira) às 20:00 - <b>Recheio de Creme de Ninho e Coco Cremoso.</b>
             </h6>
-            <h6>
+            <h6 class="margem-topo">
                 <b>Dia 16/12</b> (quinta-feira) às 20:00 - <b>Montagem de Tortas na Taça.</b>
             </h6>
-            <h6>
+            <h6 class="margem-topo">
                 Curtiu nossa programação? Então já marque na sua agenda para não perder nenhuma aula.
             </h6>
-            <h6>Até lá.</h6>
-            <p style="font-size: 9px">Obs: Não serão fornecidas as receitas das preparações apresentadas na
+            <h6 class="margem-topo">Até lá.</h6>
+            <p style="font-size: 12px">Obs: Não serão fornecidas as receitas das preparações apresentadas na
                 Operação Cakes. Estarão todas no curso on-line.</+p>
         </div>
-        <div class="col-2"></div>
     </div>
     @else
     <div class="row justify-content-center margem-topo">
@@ -195,50 +183,50 @@
     </div>
 
     <div class="row texto-centralizado margem-topo">
-        <div class="col-3"></div>
-        <div class="col-6">
+        <div class="col-1"></div>
+        <div class="col-10">
             <h3>
                 <b>VENHA PARTICIPAR COMIGO DURANTE 3 DIAS DE UMA MARATONA DE LIVES</b>
             </h3>
         </div>
-        <div class="col-3"></div>
+        <div class="col-1"></div>
     </div>
     <div class="row texto-centralizado margem-topo">
-        <div class="col-3"></div>
-        <div class="col-6">
+        <div class="col-1"></div>
+        <div class="col-10">
             <h5>
                 Se você está pronta para viver uma vida que sempre quis e quer ter mais tempo e dinheiro para você e
                 sua
                 família, então venha comigo nessa jornada!
             </h5>
         </div>
-        <div class="col-3"></div>
+        <div class="col-1"></div>
     </div>
 
     <div class="row texto-centralizado margem-topo">
-        <div class="col-3"></div>
-        <div class="col-6">
-            <iframe class="video-emili" height="100%" width="100%" src="https://www.youtube.com/embed/cP0iF0-OQ-4"
+        <div class="col-1"></div>
+        <div class="col-10">
+            <iframe class="video-emili" width="600px" height="600px" src="https://www.youtube.com/embed/cP0iF0-OQ-4"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
         </div>
-        <div class="col-3"></div>
+        <div class="col-1"></div>
     </div>
 
     <div class="row margem-topo margem-topo">
-        <div class="col-4"></div>
-        <div class="col-4">
+        <div class="col-3"></div>
+        <div class="col-6">
             <div class="mb-3 row">
-                <input type="text" class="form-control" id="nome" placeholder="Nome completo">
+                <input type="text" class="form-control form-control-lg" id="nome" placeholder="Nome completo">
             </div>
             <div class="mb-3 row">
-                <input type="email" class="form-control" id="email" placeholder="Seu melhor e-mail">
+                <input type="email" class="form-control form-control-lg" id="email" placeholder="Seu melhor e-mail">
             </div>
             <div class="mb-3 row">
-                <input type="text" class="form-control" id="telefone" data-inputmask="'mask': '(99) 99999-9999'"
-                    placeholder="Anote aqui o seu número">
+                <input type="text" class="form-control form-control-lg" id="telefone" data-inputmask="'mask': '(99) 99999-9999'"
+                    placeholder="Anote aqui o seu número de WhatsApp">
             </div>
 
             <div class="mb-3 row">
@@ -251,7 +239,7 @@
                 </button>
             </div>
         </div>
-        <div class="col-4"></div>
+        <div class="col-3"></div>
     </div>
 
     <div class="row justify-content-center margem-topo">
@@ -259,8 +247,8 @@
     </div>
 
     <div class="row texto-centralizado margem-topo">
-        <div class="col-3"></div>
-        <div class="col-6">
+        <div class="col-1"></div>
+        <div class="col-10">
             <h3>
                 <b>
                     <u>
@@ -269,42 +257,42 @@
                 </b>
             </h3>
         </div>
-        <div class="col-3"></div>
+        <div class="col-1"></div>
     </div>
 
     <div class="row texto-centralizado margem-topo">
-        <div class="col-3"></div>
-        <div class="col-6">
+        <div class="col-1"></div>
+        <div class="col-10">
             <h5>
                 <b>
                     MONTAGEM DE TORTA NA TAÇA, IDEIA INCRÍVEL PARA VOCÊ ARRASAR NO NATAL OU EM QUALQUER OCASIÃO
                 </b>
             </h5>
         </div>
-        <div class="col-3"></div>
+        <div class="col-1"></div>
     </div>
 
     <div class="row margem-topo margem-rodape">
-        <div class="col-3"></div>
-        <div class="col-6">
-            <h5>
+        <div class="col-1"></div>
+        <div class="col-10">
+            <h5 class="margem-topo">
                 <b>Dia 14/12</b> (terça-feira) às 20:00 - <b>Descontração da Receita da Massa e da Compota de
                     Frutas.</b>
             </h5>
-            <h5>
+            <h5 class="margem-topo">
                 <b>Dia 15/12</b> (quarta-feira) às 20:00 - <b>Recheio de Creme de Ninho e Coco Cremoso.</b>
             </h5>
-            <h5>
+            <h5 class="margem-topo">
                 <b>Dia 16/12</b> (quinta-feira) às 20:00 - <b>Montagem de Tortas na Taça.</b>
             </h5>
-            <h5>
+            <h5 class="margem-topo">
                 Curtiu nossa programação? Então já marque na sua agenda para não perder nenhuma aula.
             </h5>
-            <h5>Até lá.</h5>
-            <p style="font-size: 10px">Obs: Não serão fornecidas as receitas das preparações apresentadas na
+            <h5 class="margem-topo">Até lá.</h5>
+            <p style="font-size: 13px">Obs: Não serão fornecidas as receitas das preparações apresentadas na
                 Operação Cakes. Estarão todas no curso on-line.</+p>
         </div>
-        <div class="col-3"></div>
+        <div class="col-1"></div>
     </div>
     @endif
 
@@ -340,18 +328,18 @@
                             <div class="col-4"></div>
                         </div>
                         <a href="https://chat.whatsapp.com/I4Cmnzm1xaTJu3iZmzHKGU"
-                            class="btn btn-lg btn-outline-warning margem-topo" role="button">
+                            class="btn btn-lg btn-success margem-topo" role="button">
                             <h3>
                                 <b>
                                     <i class="fa fa-whatsapp"></i>
-                                    Quero entrar no grupo VIP do WhatsApp!
+                                    QUERO ENTRAR NO GRUPO VIP DO WHATSAPP!
                                 </b>
                             </h3>
                         </a>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" onclick="fecharModal()">Close</button>
                 </div>
             </div>
         </div>
@@ -360,22 +348,35 @@
     <script>
         $(function() {
             $(":input").inputmask();
-            limparCampos();   
-            // $('#modalWhatsApp').modal('show');       
+            limparCampos();         
         });
+        
+        function fecharModal() {
+            $('#modalWhatsApp').modal('hide'); 
+        }
         
         function limparCampos() {  
             $("#nome").val('')
             $("#email").val('')
             $("#telefone").val('')
         }
+        
+        function validarEmail(email) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                return (true)
+            }
+
+            return (false)
+        }
 
         function garantirVaga(){
             let nome = $('#nome').val()
             let email = $('#email').val()
             let telefone = $('#telefone').val()
+            
+            let isEmailValido = validarEmail(email)
 
-            if (nome != '' && email != '' && telefone != '') {
+            if (nome != '' && email != '' && telefone != '' && isEmailValido) {
                 $.ajaxSetup({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -401,7 +402,7 @@
                         } else if (response.status == "warning" && response.mensagem == 'e-mail existente.') {
                             Swal.fire({
                                 title: 'Sucesso',
-                                text: 'Anteriormente a sua vaga já foi garantida com a gente!',
+                                text: 'Vaga garantida com sucesso!',
                                 icon: 'success',
                                 confirmButtonText: 'Fechar'
                             })                                             
@@ -437,7 +438,7 @@
                     icon: 'warning',
                     confirmButtonText: 'Fechar'
                 })
-            } else if (email == '') {            
+            } else if (email == '' || !isEmailValido) {            
                 $("#email").focus();
 
                 Swal.fire({
