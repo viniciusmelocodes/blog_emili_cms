@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\EbookDownloadController;
 use App\Http\Controllers\LeadController;
+use App\Http\Controllers\OperacaoCakesController;
 use App\Http\Controllers\PostController;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
@@ -52,10 +53,9 @@ Route::get('/operacao_cakes', function () {
     return redirect()->away('https://lp.egoi.page/1e2e5aCS/OperacaoCakes');
 });
 
-Route::get('/operacao-cakes', function () {
-    return view('operacaocakes', [
-        'titlePageNavigator' => 'Operação Cakes',
-    ]);
+Route::prefix('/operacao-cakes')->group(function () {
+    Route::get('/', [OperacaoCakesController::class, 'index']);
+    Route::post('/garantirvaga', [OperacaoCakesController::class, 'garantirVaga'])->name('operacao_cakes_garantir_vaga');
 });
 
 Route::get('/curso_bolo_gelado', function () {

@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/bootstrap-icons/font/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
 
     <title>{{ $titlePageNavigator }}</title>
@@ -36,6 +37,10 @@
 
         .margem-topo {
             padding-top: 30px
+        }
+
+        .margem-rodape {
+            padding-bottom: 30px
         }
     </style>
 
@@ -68,21 +73,31 @@
     <div class="row texto-centralizado">
         <div class="col-3"></div>
         <div class="col-6">
-            <p>VENHA PARTICIPAR COMIGO DURANTE 3 DIAS DE UMA MARATONA DE LIVES</p>
-            <p>
+            <h3>
+                <b>VENHA PARTICIPAR COMIGO DURANTE 3 DIAS DE UMA MARATONA DE LIVES</b>
+            </h3>
+            <h5>
                 Se você está pronta para viver uma vida que sempre quis e quer ter mais tempo e dinheiro para você e
                 sua
                 família, então venha comigo nessa jornada!
-            </p>
+            </h5>
         </div>
         <div class="col-3"></div>
     </div>
 
-    <div class="row texto-centralizado">
-        <h3>Thumb da Emili aqui</h3>
+    <div class="row texto-centralizado margem-topo">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <iframe class="video-emili" height="100%" width="100%" src="https://www.youtube.com/embed/MyOdy5HTts4"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="col-3"></div>
     </div>
 
-    <div class="row margem-topo">
+    <div class="row margem-topo margem-topo">
         <div class="col-4"></div>
         <div class="col-4">
             <div class="mb-3 row">
@@ -98,7 +113,11 @@
 
             <div class="mb-3 row">
                 <button class="btn btn-lg btn-success" onclick="garantirVaga()">
-                    <h4>GARANTA A SUA VAGA GRATUITA</h4>
+                    <h4>
+                        <b>
+                            GARANTA A SUA VAGA GRATUITA
+                        </b>
+                    </h4>
                 </button>
             </div>
         </div>
@@ -106,30 +125,47 @@
     </div>
 
     <div class="row justify-content-center margem-topo">
-        <img class="imagem" src="{{ asset('assets/images/porta.jpg') }}" alt="">
+        <img class="imagem" src="{{ asset('assets/images/porta.png') }}" alt="">
     </div>
 
     <div class="row texto-centralizado margem-topo">
         <div class="col-3"></div>
         <div class="col-6">
-            <p>CONFIRA A PROGRAMAÇÃO COMPLETA</p>
-            <p>
-                MONTAGEM DE TORTA NA TAÇA, IDEIA INCRIVEL PARA VOCÊ ARRASAR NO NATAL OU EM QUALQUER OCASIÃO
-            </p>
+            <h3>
+                <b>
+                    <u>
+                        CONFIRA A PROGRAMAÇÃO COMPLETA:
+                    </u>
+                </b>
+            </h3>
         </div>
         <div class="col-3"></div>
     </div>
-    <div class="row">
+
+    <div class="row texto-centralizado margem-topo">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <h5>
+                <b>
+                    MONTAGEM DE TORTA NA TAÇA, IDEIA INCRÍVEL PARA VOCÊ ARRASAR NO NATAL OU EM QUALQUER OCASIÃO
+                </b>
+            </h5>
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+    <div class="row margem-topo">
         <div class="col-3"></div>
         <div class="col-6">
             <p>
-                Dia 14/12 (terça-feira) às 20:00 - Descontração da Receita da Massa e da Compota de Frutas.
+                <b>Dia 14/12</b> (terça-feira) às 20:00 - <b>Descontração da Receita da Massa e da Compota de
+                    Frutas.</b>
             </p>
             <p>
-                Dia 15/12 (quarta-feira) às 20:00 - Recheio de Creme de Ninho e Coco Cremoso.
+                <b>Dia 15/12</b> (quarta-feira) às 20:00 - <b>Recheio de Creme de Ninho e Coco Cremoso.</b>
             </p>
             <p>
-                Dia 16/12 (quinta-feira) às 20:00 - Montagem de Tortas na Taça.
+                <b>Dia 16/12</b> (quinta-feira) às 20:00 - <b>Montagem de Tortas na Taça.</b>
             </p>
             <p>
                 Curtiu nossa programação? Então já marque na sua agenda para não perder nenhuma aula.
@@ -141,23 +177,54 @@
         <div class="col-3"></div>
     </div>
 
-    <!-- Modal Loading -->
-    <div class="modal fade" id="modalLoading" tabindex="-1" role="dialog" aria-labelledby="modalLoadingLabel"
+    <div class="row justify-content-center margem-topo margem-rodape">
+        <img class="imagem" src="{{ asset('assets/images/tacas.jpg') }}" alt="">
+    </div>
+
+    <!-- Modal WhatsApp -->
+    <div class="modal fade" id="modalWhatsApp" tabindex="-1" role="dialog" aria-labelledby="modalWhatsAppLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">Aguarde um momento...</h5>
+                    <h5 class="modal-title" id="modalLabel">Obrigado!</h5>
                 </div>
                 <div class="modal-body">
                     <div class="text-center">
-                        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
-                            <span class="sr-only">Loading...</span>
+                        <h4>
+                            <b class="margem-topo">
+                                Obrigado por se cadastrar na nossa lista de espera!
+                            </b>
+                        </h4>
+                        <h5 class="margem-topo">
+                            Você gostaria de participar de um grupo exclusivo de WhatsApp onde, eventualmente, pode ser
+                            divulgado vagas remanescentes, com prioridade?
+                        </h5>
+                        <h5 class="margem-topo">
+                            <b style="color: rgb(214, 121, 0)">
+                                Caso positivo, entre no grupo abaixo.
+                            </b>
+                        </h5>
+                        <div class="row margem-topo">
+                            <div class="col-4"></div>
+                            <div class="col-4">
+                                <i class="bi bi-arrow-down-circle-fill"></i>
+                            </div>
+                            <div class="col-4"></div>
                         </div>
+                        <a href="https://chat.whatsapp.com/I4Cmnzm1xaTJu3iZmzHKGU"
+                            class="btn btn-lg btn-outline-warning margem-topo" role="button">
+                            <h3>
+                                <b>
+                                    <i class="fa fa-whatsapp"></i>
+                                    Quero entrar no grupo VIP do WhatsApp!
+                                </b>
+                            </h3>
+                        </a>
                     </div>
                 </div>
                 <div class="modal-footer">
-
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -166,7 +233,8 @@
     <script>
         $(function() {
             $(":input").inputmask();
-            limparCampos();        
+            limparCampos();   
+            // $('#modalWhatsApp').modal('show');       
         });
         
         function limparCampos() {  
@@ -175,18 +243,10 @@
             $("#telefone").val('')
         }
 
-        function goHome() {
-            window.location.href = 'https://emiliananiasconfeitaria.com.br/operacao-cakes';
-        }
-
-        function goPdfEbook(email) {
-            window.open('https://emiliananiasconfeitaria.com.br/operacao-cakes/meuebook/' + email, '_blank');
-        }
-
         function garantirVaga(){
-            let nome = $('#nome')
-            let email = $('#email')
-            let telefone = $('#telefone')
+            let nome = $('#nome').val()
+            let email = $('#email').val()
+            let telefone = $('#telefone').val()
 
             if (nome != '' && email != '' && telefone != '') {
                 $.ajaxSetup({
@@ -195,10 +255,8 @@
                     }
                 });
                 
-                $('#modalLoading').modal('show');
-
                 return $.ajax({
-                    url: '{{ route("lead_liberar_ebook") }}',
+                    url: '{{ route("operacao_cakes_garantir_vaga") }}',
                     type: 'POST',
                     data: {
                         nome: nome,       
@@ -208,152 +266,37 @@
                     success: function (response) {
                         if (response.status == "success" || response.status == '"success"<pre>') {
                             Swal.fire({
-                                title: 'Aviso',
-                                text: "O seu e-book está liberado e estará disponível em uma nova aba/janela para download. Caso o seu navegador esteja bloqueando abertura de abas/janelas então lembre de permitir esse site. Gostaria de abrir uma nova aba/janela?",
-                                icon: 'warning',
-                                showCancelButton: true,
-                                confirmButtonColor: '#3085d6',
-                                cancelButtonColor: '#d33',
-                                confirmButtonText: 'Fazer meu download',
-                                cancelButtonText: 'Cancelar'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    goPdfEbook(email);                                
-                                }
-                                $('#modalLoading').modal('hide');
-                            });
-                        } else if (response.status == "warning" || response.status == '"warning"<pre>') {
+                                title: 'Sucesso',
+                                text: 'Vaga garantida com sucesso!',
+                                icon: 'success',
+                                confirmButtonText: 'Fechar'
+                            })
+                        } else if (response.status == "warning" && response.mensagem == 'e-mail existente.') {
                             Swal.fire({
-                                title: 'Aviso',
-                                text: "O seu e-book já foi liberado anteriormente. Gostaria de uma nova liberação?",
-                                icon: 'warning',
-                                showCancelButton: true,
-                                confirmButtonColor: '#3085d6',
-                                cancelButtonColor: '#d33',
-                                confirmButtonText: 'Enviar',
-                                cancelButtonText: 'Cancelar'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    return $.ajax({
-                                        url: '{{route("lead_liberar_ebook_novamente")}}',
-                                        type: 'POST',
-                                        data: {
-                                            nome: nome,       
-                                            email: email,       
-                                            telefone: telefone,       
-                                        },
-                                        success: function (response) {
-                                            Swal.fire({
-                                                title: 'Aviso',
-                                                text: "O seu e-book está liberado e estará disponível para download em uma nova aba/janela. Caso o seu navegador esteja configurado para bloquear abertura de abas/janelas então lembre de permitir isso. Gostaria de abrir uma nova aba/janela?",
-                                                icon: 'warning',
-                                                showCancelButton: true,
-                                                confirmButtonColor: '#3085d6',
-                                                cancelButtonColor: '#d33',
-                                                confirmButtonText: 'Fazer meu download agora',
-                                                cancelButtonText: 'Cancelar'
-                                            }).then((result) => {
-                                                if (result.isConfirmed) {
-                                                    goPdfEbook(email);                                
-                                                }
-                                                $('#modalLoading').modal('hide');
-                                            });
-                                        },
-                                        error: function (response) {
-                                            Swal.fire({
-                                                title: 'Erro!',
-                                                text: 'Comunique ao administrador sobre esse erro. Contato: viniciusldemelo@gmail.com. Detalhes: ' + response.responseJSON.message,
-                                                icon: 'error',
-                                                confirmButtonText: 'Fechar'
-                                            })              
-                                            $('#modalLoading').modal('hide');                              
-                                        }
-                                    });
-                                } else {                                    
-                                    $('#modalLoading').modal('hide');
-                                }
-                            })                            
+                                title: 'Sucesso',
+                                text: 'Anteriormente a sua vaga já foi garantida com a gente!',
+                                icon: 'success',
+                                confirmButtonText: 'Fechar'
+                            })                                             
                         }
+
+                        setTimeout(() => {
+                            $('#modalWhatsApp').modal('show');   
+                        }, 3000); 
 
                         limparCampos();                    
                     },
-                    error: function (response) {
-                        if (response.responseJSON != undefined) {
-                            if (response.responseJSON.message == 'CSRF token mismatch.') {
-                                Swal.fire({
-                                    title: 'Aviso!',
-                                    text: 'Atualize a página e tente novamente.',
-                                    icon: 'warning',
-                                    confirmButtonText: 'Fechar'
-                                })
-                                $('#modalLoading').modal('hide');
-                            } else if (response.responseJSON[0] == 'warning') {
-                                Swal.fire({
-                                    title: 'Aviso!',
-                                    text: response.responseJSON.mensagem,
-                                    icon: 'warning',
-                                    confirmButtonText: 'Fechar'
-                                })    
-                                $('#modalLoading').modal('hide');                            
-                            }
-                        } else if (response.responseText == "warning" || response.responseText == '"warning"<pre>') {
-                            Swal.fire({
-                                title: 'Aviso',
-                                text: "O seu e-book já foi liberado anteriormente. Gostaria de uma nova liberação?",
-                                icon: 'warning',
-                                showCancelButton: true,
-                                confirmButtonColor: '#3085d6',
-                                cancelButtonColor: '#d33',
-                                confirmButtonText: 'Enviar',
-                                cancelButtonText: 'Cancelar'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    return $.ajax({
-                                        url: '{{route("lead_liberar_ebook_novamente")}}',
-                                        type: 'POST',
-                                        data: {
-                                            nome: nome,       
-                                            email: email,       
-                                            telefone: telefone,       
-                                        },
-                                        success: function (response) {
-                                            Swal.fire({
-                                                title: 'Aviso',
-                                                text: "O seu e-book está liberado e estará disponível para download em uma nova aba/janela. Caso o seu navegador esteja configurado para bloquear abertura de abas/janelas então lembre de permitir isso. Gostaria de abrir uma nova aba/janela?",
-                                                icon: 'warning',
-                                                showCancelButton: true,
-                                                confirmButtonColor: '#3085d6',
-                                                cancelButtonColor: '#d33',
-                                                confirmButtonText: 'Fazer meu download agora',
-                                                cancelButtonText: 'Cancelar'
-                                            }).then((result) => {
-                                                if (result.isConfirmed) {
-                                                    goPdfEbook(email);                                
-                                                }
-                                                $('#modalLoading').modal('hide');
-                                            });
-                                        },
-                                        error: function (response) {
-                                            Swal.fire({
-                                                title: 'Erro!',
-                                                text: 'Comunique ao administrador sobre esse erro. Contato: viniciusldemelo@gmail.com. Detalhes: ' + response.responseJSON.detalhes,
-                                                icon: 'error',
-                                                confirmButtonText: 'Fechar'
-                                            })      
-                                            $('#modalLoading').modal('hide');                                      
-                                        }
-                                    });
-                                }
-                            })      
-                        } else {
-                            Swal.fire({
-                                title: 'Erro!',
-                                text: 'Comunique ao administrador sobre esse erro. Contato: viniciusldemelo@gmail.com. Detalhes: ' + response.responseJSON.detalhes,
-                                icon: 'error',
-                                confirmButtonText: 'Fechar'
-                            })                    
-                            $('#modalLoading').modal('hide');        
-                        }
+                    error: function (response) {                        
+                        Swal.fire({
+                            title: 'Aviso!',
+                            text: 'Não foi possível completar a sua solicitação no momento. Por favor, tente mais tarde!',
+                            icon: 'warning',
+                            confirmButtonText: 'Fechar'
+                        })    
+                        
+                        setTimeout(() => {
+                            $('#modalWhatsApp').modal('show');   
+                        }, 3000);                         
 
                         limparCampos();
                     }
