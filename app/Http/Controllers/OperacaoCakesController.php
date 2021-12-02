@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification;
+use Jenssegers\Agent\Agent;
 
 class OperacaoCakesController extends Controller
 {
@@ -19,8 +20,13 @@ class OperacaoCakesController extends Controller
      */
     public function index()
     {
+        $agent = new Agent();
+
+        $isMobile = $agent->isMobile();
+        
         return view('operacaocakes', [
             'titlePageNavigator' => 'Operação Cakes',
+            'isMobile'           => $isMobile
         ]);
     }
 

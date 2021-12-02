@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <link rel="shortcut icon" href="{{ asset('assets/icon/favicon.ico') }}" />
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -35,6 +37,10 @@
             width: 50%
         }
 
+        .imagem-mobile {
+            width: 80%
+        }
+
         .margem-topo {
             padding-top: 30px
         }
@@ -52,30 +58,154 @@
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/60bef2a8dd60a20abbe52349/1f7ku7p22';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/60bef2a8dd60a20abbe52349/1f7ku7p22';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
     </script>
     <!--End of Tawk.to Script-->
 
 </head>
 
 <body>
-    <div class="row justify-content-center">
+    @if ($isMobile)
+    <div class="row justify-content-center margem-topo">
+        <img class="imagem-mobile" src="{{ asset('assets/images/header.png') }}" alt="">
+    </div>
+
+    <div class="row texto-centralizado margem-topo">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h3>
+                <b>VENHA PARTICIPAR COMIGO DURANTE 3 DIAS DE UMA MARATONA DE LIVES</b>
+            </h3>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <div class="row texto-centralizado margem-topo">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h5>
+                Se você está pronta para viver uma vida que sempre quis e quer ter mais tempo e dinheiro para você e
+                sua
+                família, então venha comigo nessa jornada!
+            </h5>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row texto-centralizado margem-topo">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <iframe class="video-emili" height="100%" width="100%" src="https://www.youtube.com/embed/cP0iF0-OQ-4"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row margem-topo margem-topo">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="mb-3 row">
+                <input type="text" class="form-control" id="nome" placeholder="Nome completo">
+            </div>
+            <div class="mb-3 row">
+                <input type="email" class="form-control" id="email" placeholder="Seu melhor e-mail">
+            </div>
+            <div class="mb-3 row">
+                <input type="text" class="form-control" id="telefone" data-inputmask="'mask': '(99) 99999-9999'"
+                    placeholder="Anote aqui o seu número">
+            </div>
+
+            <div class="mb-3 row">
+                <button class="btn btn-lg btn-success" onclick="garantirVaga()">
+                    <h4>
+                        <b>
+                            GARANTA A SUA VAGA GRATUITA
+                        </b>
+                    </h4>
+                </button>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row justify-content-center margem-topo">
+        <img class="imagem-mobile" src="{{ asset('assets/images/porta.png') }}" alt="">
+    </div>
+
+    <div class="row texto-centralizado margem-topo">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h3>
+                <b>
+                    <u>
+                        CONFIRA A PROGRAMAÇÃO COMPLETA:
+                    </u>
+                </b>
+            </h3>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row texto-centralizado margem-topo">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h5>
+                <b>
+                    MONTAGEM DE TORTA NA TAÇA, IDEIA INCRÍVEL PARA VOCÊ ARRASAR NO NATAL OU EM QUALQUER OCASIÃO
+                </b>
+            </h5>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row margem-topo margem-rodape">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <h6>
+                <b>Dia 14/12</b> (terça-feira) às 20:00 - <b>Descontração da Receita da Massa e da Compota de
+                    Frutas.</b>
+            </h6>
+            <h6>
+                <b>Dia 15/12</b> (quarta-feira) às 20:00 - <b>Recheio de Creme de Ninho e Coco Cremoso.</b>
+            </h6>
+            <h6>
+                <b>Dia 16/12</b> (quinta-feira) às 20:00 - <b>Montagem de Tortas na Taça.</b>
+            </h6>
+            <h6>
+                Curtiu nossa programação? Então já marque na sua agenda para não perder nenhuma aula.
+            </h6>
+            <h6>Até lá.</h6>
+            <p style="font-size: 9px">Obs: Não serão fornecidas as receitas das preparações apresentadas na
+                Operação Cakes. Estarão todas no curso on-line.</+p>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    @else
+    <div class="row justify-content-center margem-topo">
         <img class="imagem" src="{{ asset('assets/images/header.png') }}" alt="">
     </div>
 
-    <div class="row texto-centralizado">
+    <div class="row texto-centralizado margem-topo">
         <div class="col-3"></div>
         <div class="col-6">
             <h3>
                 <b>VENHA PARTICIPAR COMIGO DURANTE 3 DIAS DE UMA MARATONA DE LIVES</b>
             </h3>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row texto-centralizado margem-topo">
+        <div class="col-3"></div>
+        <div class="col-6">
             <h5>
                 Se você está pronta para viver uma vida que sempre quis e quer ter mais tempo e dinheiro para você e
                 sua
@@ -88,7 +218,7 @@
     <div class="row texto-centralizado margem-topo">
         <div class="col-3"></div>
         <div class="col-6">
-            <iframe class="video-emili" height="100%" width="100%" src="https://www.youtube.com/embed/MyOdy5HTts4"
+            <iframe class="video-emili" height="100%" width="100%" src="https://www.youtube.com/embed/cP0iF0-OQ-4"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
@@ -154,32 +284,29 @@
         <div class="col-3"></div>
     </div>
 
-    <div class="row margem-topo">
+    <div class="row margem-topo margem-rodape">
         <div class="col-3"></div>
         <div class="col-6">
-            <p>
+            <h5>
                 <b>Dia 14/12</b> (terça-feira) às 20:00 - <b>Descontração da Receita da Massa e da Compota de
                     Frutas.</b>
-            </p>
-            <p>
+            </h5>
+            <h5>
                 <b>Dia 15/12</b> (quarta-feira) às 20:00 - <b>Recheio de Creme de Ninho e Coco Cremoso.</b>
-            </p>
-            <p>
+            </h5>
+            <h5>
                 <b>Dia 16/12</b> (quinta-feira) às 20:00 - <b>Montagem de Tortas na Taça.</b>
-            </p>
-            <p>
+            </h5>
+            <h5>
                 Curtiu nossa programação? Então já marque na sua agenda para não perder nenhuma aula.
-            </p>
-            <p>Até lá.</p>
-            <p>Obs: Não serão disponibilizadas as receitas apresentadas na programação da Operação Cakes. Todas estarão
-                disponibilizadas no curso de Bolos Gelados.</p>
+            </h5>
+            <h5>Até lá.</h5>
+            <p style="font-size: 10px">Obs: Não serão fornecidas as receitas das preparações apresentadas na
+                Operação Cakes. Estarão todas no curso on-line.</+p>
         </div>
         <div class="col-3"></div>
     </div>
-
-    <div class="row justify-content-center margem-topo margem-rodape">
-        <img class="imagem" src="{{ asset('assets/images/tacas.jpg') }}" alt="">
-    </div>
+    @endif
 
     <!-- Modal WhatsApp -->
     <div class="modal fade" id="modalWhatsApp" tabindex="-1" role="dialog" aria-labelledby="modalWhatsAppLabel"
