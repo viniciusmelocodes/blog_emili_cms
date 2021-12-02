@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -25,6 +25,10 @@
         }
 
         .row {
+            color: white;
+        }
+
+        .row-mobile {
             color: white;
             margin-left: 10px;
             margin-right: 10px;
@@ -71,43 +75,42 @@
     </script>
     <!--End of Tawk.to Script-->
 
+    <script>
+        if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"viniciusldemelo",utcoffset:"-3"}))};sessionStorage.setItem("_swa","1");
+    </script>
+
 </head>
 
 <body>
     @if ($isMobile)
-    <div class="row justify-content-center margem-topo">
+    <div class="row row-mobile justify-content-center margem-topo">
         <img class="imagem-mobile" src="{{ asset('assets/images/header.png') }}" alt="">
     </div>
 
-    <div class="row texto-centralizado margem-topo">
-        <div class="col-12">
-            <h3>
-                <b>VENHA PARTICIPAR COMIGO DURANTE 3 DIAS DE UMA MARATONA DE LIVES</b>
-            </h3>
-        </div>
+    <div class="row row-mobile texto-centralizado margem-topo">
+        <h3>
+            <b>VENHA PARTICIPAR COMIGO DURANTE 3 DIAS DE UMA MARATONA DE LIVES</b>
+        </h3>
     </div>
-    <div class="row texto-centralizado margem-topo">
-        <div class="col-12">
-            <h5>
-                Se você está pronta para viver uma vida que sempre quis e quer ter mais tempo e dinheiro para você e
-                sua
-                família, então venha comigo nessa jornada!
-            </h5>
-        </div>
+    <div class="row row-mobile texto-centralizado margem-topo">
+        <h5>
+            Se você está pronta para viver uma vida que sempre quis e quer ter mais tempo e dinheiro para você e
+            sua
+            família, então venha comigo nessa jornada!
+        </h5>
     </div>
 
-    <div class="row texto-centralizado margem-topo">
-        <div class="col-12">
-            <iframe class="video-emili" height="100%" width="100%" src="https://www.youtube.com/embed/cP0iF0-OQ-4"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </div>
+    <div class="row row-mobile texto-centralizado margem-topo">
+        <iframe class="video-emili" height="100%" width="100%" src="https://www.youtube.com/embed/cP0iF0-OQ-4"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
     </div>
 
-    <div class="row margem-topo margem-topo">
+    <div class="row row-mobile margem-topo margem-topo">
         <div class="col-12">
+
             <div class="mb-3 row">
                 <input type="text" class="form-control form-control-lg" id="nome" placeholder="Nome completo">
             </div>
@@ -115,8 +118,8 @@
                 <input type="email" class="form-control form-control-lg" id="email" placeholder="Seu melhor e-mail">
             </div>
             <div class="mb-3 row">
-                <input type="text" class="form-control form-control-lg" id="telefone" data-inputmask="'mask': '(99) 99999-9999'"
-                    placeholder="Anote aqui o seu número de WhatsApp">
+                <input type="text" class="form-control form-control-lg" id="telefone"
+                    data-inputmask="'mask': '(99) 99999-9999'" placeholder="Anote aqui o seu número de WhatsApp">
             </div>
 
             <div class="mb-3 row">
@@ -131,51 +134,45 @@
         </div>
     </div>
 
-    <div class="row justify-content-center margem-topo">
+    <div class="row row-mobile justify-content-center margem-topo">
         <img class="imagem-mobile" src="{{ asset('assets/images/porta.png') }}" alt="">
     </div>
 
-    <div class="row texto-centralizado margem-topo">
-        <div class="col-12">
-            <h3>
-                <b>
-                    <u>
-                        CONFIRA A PROGRAMAÇÃO COMPLETA:
-                    </u>
-                </b>
-            </h3>
-        </div>
+    <div class="row row-mobile texto-centralizado margem-topo">
+        <h3>
+            <b>
+                <u>
+                    CONFIRA A PROGRAMAÇÃO COMPLETA:
+                </u>
+            </b>
+        </h3>
     </div>
 
-    <div class="row texto-centralizado margem-topo">
-        <div class="col-12">
-            <h5>
-                <b>
-                    MONTAGEM DE TORTA NA TAÇA, IDEIA INCRÍVEL PARA VOCÊ ARRASAR NO NATAL OU EM QUALQUER OCASIÃO
-                </b>
-            </h5>
-        </div>
+    <div class="row row-mobile texto-centralizado margem-topo">
+        <h5>
+            <b>
+                MONTAGEM DE TORTA NA TAÇA, IDEIA INCRÍVEL PARA VOCÊ ARRASAR NO NATAL OU EM QUALQUER OCASIÃO
+            </b>
+        </h5>
     </div>
 
-    <div class="row margem-topo margem-rodape">
-        <div class="col-12">
-            <h6 class="margem-topo">
-                <b>Dia 14/12</b> (terça-feira) às 20:00 - <b>Descontração da Receita da Massa e da Compota de
-                    Frutas.</b>
-            </h6>
-            <h6 class="margem-topo">
-                <b>Dia 15/12</b> (quarta-feira) às 20:00 - <b>Recheio de Creme de Ninho e Coco Cremoso.</b>
-            </h6>
-            <h6 class="margem-topo">
-                <b>Dia 16/12</b> (quinta-feira) às 20:00 - <b>Montagem de Tortas na Taça.</b>
-            </h6>
-            <h6 class="margem-topo">
-                Curtiu nossa programação? Então já marque na sua agenda para não perder nenhuma aula.
-            </h6>
-            <h6 class="margem-topo">Até lá.</h6>
-            <p style="font-size: 12px">Obs: Não serão fornecidas as receitas das preparações apresentadas na
-                Operação Cakes. Estarão todas no curso on-line.</+p>
-        </div>
+    <div class="row row-mobile margem-topo margem-rodape">
+        <h6 class="margem-topo">
+            <b>Dia 14/12</b> (terça-feira) às 20:00 - <b>Descontração da Receita da Massa e da Compota de
+                Frutas.</b>
+        </h6>
+        <h6 class="margem-topo">
+            <b>Dia 15/12</b> (quarta-feira) às 20:00 - <b>Recheio de Creme de Ninho e Coco Cremoso.</b>
+        </h6>
+        <h6 class="margem-topo">
+            <b>Dia 16/12</b> (quinta-feira) às 20:00 - <b>Montagem de Tortas na Taça.</b>
+        </h6>
+        <h6 class="margem-topo">
+            Curtiu nossa programação? Então já marque na sua agenda para não perder nenhuma aula.
+        </h6>
+        <h6 class="margem-topo">Até lá.</h6>
+        <p style="font-size: 12px">Obs: Não serão fornecidas as receitas das preparações apresentadas na
+            Operação Cakes. Estarão todas no curso on-line.</+p>
     </div>
     @else
     <div class="row justify-content-center margem-topo">
@@ -225,8 +222,8 @@
                 <input type="email" class="form-control form-control-lg" id="email" placeholder="Seu melhor e-mail">
             </div>
             <div class="mb-3 row">
-                <input type="text" class="form-control form-control-lg" id="telefone" data-inputmask="'mask': '(99) 99999-9999'"
-                    placeholder="Anote aqui o seu número de WhatsApp">
+                <input type="text" class="form-control form-control-lg" id="telefone"
+                    data-inputmask="'mask': '(99) 99999-9999'" placeholder="Anote aqui o seu número de WhatsApp">
             </div>
 
             <div class="mb-3 row">
