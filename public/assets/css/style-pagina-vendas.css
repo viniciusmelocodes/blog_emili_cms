@@ -1,7 +1,3 @@
-body {
-    font-family: "Raleway", sans-serif !important;
-}
-
 a {
     text-decoration: none !important;
     color: white !important;
@@ -62,8 +58,34 @@ a {
     color: red;
 }
 
-/* 1441px a 2560px */
-@media only screen and (min-width: 1441px) and (max-width: 2560px) {
+.imagem-secao-veja-receitas-phone {
+    width: 30px;
+}
+
+.texto-alinhamento-esquerda {
+    text-align: left;
+}
+
+#toTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    z-index: 98;
+    padding: 15px;
+}
+
+#toTopBtn img {
+    width: 80%;
+}
+
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
+
+/* 1441px a 3840px */
+@media only screen and (min-width: 1441px) and (max-width: 3840px) {
     .btn-primary,
     .btn-primary:hover,
     .btn-primary:active,
@@ -96,9 +118,9 @@ a {
     }
 
     .video-emili {
-        padding-top: 40px;        
-        width: 1400px !important;
-        height: 1400px !important;
+        padding-top: 40px;
+        width: 800px !important;
+        height: 800px !important;
     }
 
     .videos-depoimentos {
@@ -256,7 +278,7 @@ a {
     }
 
     .icone-14 {
-        width: 40%;
+        width: 50%;
         padding: 80px;
     }
 
@@ -302,13 +324,13 @@ a {
     }
 
     .video-emili {
-        padding-top: 40px;        
-        width: 900px !important;
-        height: 900px !important;
+        padding-top: 40px;
+        width: 600px !important;
+        height: 600px !important;
     }
 
     .videos-depoimentos {
-        padding-top: 40px;        
+        padding-top: 40px;
         width: 500px !important;
         height: 500px !important;
     }
@@ -348,7 +370,7 @@ a {
 
     /* Veja receitas */
     .imagem-secao-veja-receitas {
-        width: 4%;
+        width: 35px;
     }
 
     .texto-secao-veja-receitas-1 {
@@ -462,7 +484,7 @@ a {
     }
 
     .icone-14 {
-        width: 40%;
+        width: 50%;
         padding: 80px;
     }
 
@@ -508,15 +530,15 @@ a {
     }
 
     .video-emili {
-        padding-top: 40px;        
+        padding-top: 40px;
         width: 700px !important;
         height: 700px !important;
     }
 
     .videos-depoimentos {
         padding-top: 40px;
-        width: 450px !important;
-        height: 450px !important;
+        width: 340px !important;
+        height: 340px !important;
     }
 
     .texto-sobre-emili {
@@ -532,14 +554,14 @@ a {
     }
 
     .voce-vai-receber {
-        width: 300px;
+        width: 220px;
         height: 300px;
         padding: 20px;
         margin-bottom: 20px;
     }
 
     .serve-para-voce-que {
-        width: 300px;
+        width: 220px;
         height: 240px;
         padding: 20px;
         margin-bottom: 20px;
@@ -554,7 +576,7 @@ a {
 
     /* Veja receitas */
     .imagem-secao-veja-receitas {
-        width: 4%;
+        width: 30px;
     }
 
     .texto-secao-veja-receitas-1 {
@@ -714,13 +736,13 @@ a {
     }
 
     .video-emili {
-        padding-top: 40px;        
+        padding-top: 40px;
         width: 400px !important;
         height: 400px !important;
     }
 
     .videos-depoimentos {
-        padding-top: 40px;        
+        padding-top: 40px;
         width: 250px !important;
         height: 250px !important;
     }
@@ -876,7 +898,7 @@ a {
     }
 
     .icone-14 {
-        width: 40%;
+        width: 50%;
         padding: 20px;
     }
 
@@ -922,7 +944,7 @@ a {
     }
 
     .videos-depoimentos {
-        padding-top: 40px;        
+        padding-top: 40px;
         width: 300px !important;
         height: 300px !important;
     }
@@ -1121,11 +1143,11 @@ a {
     }
 
     .videos-depoimentos {
-        padding-top: 40px;        
+        padding-top: 40px;
         width: 250px !important;
         height: 250px !important;
-    }    
-    
+    }
+
     .texto-sobre-emili {
         font-size: 15px;
     }
@@ -1320,7 +1342,7 @@ a {
     }
 
     .videos-depoimentos {
-        padding-top: 40px;        
+        padding-top: 40px;
         width: 250px !important;
         height: 250px !important;
     }

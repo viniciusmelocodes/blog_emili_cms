@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('assets/bootstrap-icons/font/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
 
-    <title>{{ $titlePageNavigator }}</title>
+    <title>{{ $titlePageNavigator }}  | Emili Ananias Confeitaria</title>
     <style>
         body {
             background: black;

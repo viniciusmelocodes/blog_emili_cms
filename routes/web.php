@@ -9,6 +9,7 @@ use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
+use Jenssegers\Agent\Agent;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,7 +60,13 @@ Route::prefix('/operacao-cakes')->group(function () {
 });
 
 Route::get('/curso_bolo_gelado', function () {
-    return view('pagina-vendas.index');
+    $agent = new Agent();
+
+    $isPhone = $agent->isPhone();
+
+    return view('pagina-vendas.index', [
+        'isPhone' => $isPhone,
+    ]);
 });
 
 Route::prefix('receitas-doces')->group(function () {

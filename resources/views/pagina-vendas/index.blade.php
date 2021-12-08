@@ -9,18 +9,15 @@
 
     <link rel="shortcut icon" href="{{ asset('assets/icon/favicon.ico') }}" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('assets/css/style-pagina-vendas.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ asset('assets/bootstrap-icons/font/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
+    <script src="{{ asset('assets/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <script src="{{ asset('assets/js/js-pagina-vendas.js') }}">
     </script>
@@ -46,21 +43,25 @@
 </head>
 
 <body>
+    <div id="scrolltotop_parent">
+        <div tabindex="0" id="scrolltotop_arrow">
+        </div>
+    </div>
     <center>
         {{-- Primeiro quadro --}}
         <div class="primeiro-quadro">
             <div class="container">
                 <p class="texto-padrao-grande">
                     <b>
-                        APRENDA O <strong class="texto-vermelho">PASSO-A-PASSO COMPLETO</strong> PARA VOCÊ DOMINAR E
-                        CRIAR <strong class="texto-vermelho">BOLOS
-                            GELADOS INCRÍVEIS </strong>E AINDA
-                        FATURAR <strong class="texto-vermelho">ATÉ
-                            R$ 5 MIL POR MÊS!</strong>
+                        APRENDA O PASSO-A-PASSO COMPLETO PARA VOCÊ DOMINAR E
+                        CRIAR BOLOS
+                        GELADOS INCRÍVEIS E AINDA
+                        FATURAR ATÉ
+                        R$ 5 MIL POR MÊS!
                     </b>
                 </p>
             </div>
-            <iframe class="video-emili" height ="100%" width="100%" src="https://www.youtube.com/embed/PULsV_vLGV8"
+            <iframe class="video-emili" height="100%" width="100%" src="https://www.youtube.com/embed/29jKgI0ghBk"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
@@ -71,11 +72,13 @@
                 </b>
             </p>
             <p>
-                <button type="button" class="btn btn-primary" onclick="goCheckout()">
+                <button type="button" class="btn btn-lg btn-primary" onclick="goCheckout()">
                     <strong>
                         QUERO GARANTIR A MINHA VAGA AGORA
                     </strong>
-                    <i class="bi bi-cart4"></i>
+                    <h2>
+                        <i class="bi bi-cart4"></i>
+                    </h2>
                 </button>
             </p>
         </div>
@@ -85,9 +88,8 @@
             <div class="container linha-margem">
                 <p class="texto-padrao-grande">
                     <b>
-                        DESCUBRA AS <strong class="texto-vermelho">ESTRATÉGIAS INICIAIS</strong> QUE EU USEI PARA SAIR
-                        DO <strong class="texto-vermelho">ABSOLUTO ZERO</strong> E ME TORNAR UMA
-                        <strong class="texto-vermelho">EMPREENDEDORA</strong>
+                        DESCUBRA AS ESTRATÉGIAS INICIAIS QUE EU USEI PARA SAIR DO ABSOLUTO ZERO E ME TORNAR UMA
+                        EMPREENDEDORA
                     </b>
                 </p>
             </div>
@@ -96,7 +98,7 @@
             </p>
             <div class="container linha-margem">
                 <div class="row">
-                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                         <div class="borda-topo sombra voce-vai-receber">
                             <img class="icone-1" src="https://i.ibb.co/zfnwkVL/icone-1.png">
                             <p>
@@ -106,7 +108,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                         <div class="borda-topo sombra voce-vai-receber">
                             <img class="icone-2" src="https://i.ibb.co/r0B9BHQ/icone-2.png">
                             <p>
@@ -116,7 +118,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                         <div class="borda-topo sombra voce-vai-receber">
                             <img class="icone-3" src="https://i.ibb.co/RzvRMv8/icone-3.png">
                             <p>
@@ -184,6 +186,7 @@
             </div>
         </div>
 
+        @if ($isPhone)
         {{-- Terceiro quadro --}}
         <div class="terceiro-quadro">
             <p class=texto-padrao-grande>
@@ -194,75 +197,77 @@
 
             <div class="texto-padrao-medio">
                 <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <p class="texto-alinhamento-centralizado">
-                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
-                            Brigadeiro com Leite em pó
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Brigadeiro com
+                            <br>
+                            Leite em pó
                         </p>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <p class="texto-alinhamento-centralizado">
-                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Coco com Abacaxi
                         </p>
                     </div>
+                    <div class="col-1"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <p class="texto-alinhamento-centralizado">
-                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
-                            Red Velvet
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <p class="texto-alinhamento-centralizado">
-                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Prestígio
                         </p>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <p class="texto-alinhamento-centralizado">
-                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
-                            Leite em pó com Oreo
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <p class="texto-alinhamento-centralizado">
-                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
-                            Bombom
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <p class="texto-alinhamento-centralizado">
-                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
-                            Coco com Ameixa
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <p class="texto-alinhamento-centralizado">
-                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Damasco
                         </p>
                     </div>
+                    <div class="col-1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Red Velvet
+                        </p>
+                    </div>
+
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Leite em pó com Oreo
+                        </p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Coco com Ameixa
+                        </p>
+                    </div>
+
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Bombom
+                        </p>
+                    </div>
+                    <div class="col-1"></div>
                 </div>
 
             </div>
@@ -284,14 +289,12 @@
                             <img class="imagem-secao-bonus" src="https://i.ibb.co/x1xmqGm/icone-bonus-1.png">
                             <p class="bonus-titulo-texto-explicativo">
                                 <strong>
-                                    AULA DE BOLO GELADO
-                                    <br>
-                                    DE CARAMELO SALGADO
+                                    MENTORIA COM OS ALUNOS
                                 </strong>
                             </p>
                             <p class="bonus-texto-explicativo">
-                                Aula ao vivo com a profª Emili Ananias para os primeiros 20 alunos que comprarem. 
-                                Para os demais alunos ficará salva na plataforma para assistirem quando quiser.
+                                Duas horas de Mentoria em grupo e ao vivo, para os alunos tirarem todas as dúvidas que
+                                quiserem com a Emili Ananias.
                                 <br><del><strong>R$ 200,00</strong></del>
                             </p>
                         </div>
@@ -301,19 +304,154 @@
                             <img class="imagem-secao-bonus" src="https://i.ibb.co/pfxTC2y/icone-bonus-2.png">
                             <p class="bonus-titulo-texto-explicativo">
                                 <strong>
-                                    GRUPO COM OS ALUNOS 
+                                    GRUPO COM OS ALUNOS
                                     <br>
                                     NO WHATSAPP
                                 </strong>
                             </p>
                             <p class="bonus-texto-explicativo">
-                                Grupo no WhatsApp para tirar todas as dúvidas que os alunos tiverem. Sempre que a professora puder ela entrará no grupo e respondera as dúvidas. <br><del><strong>R$ 250,00</strong></del>
+                                Grupo no WhatsApp para tirar todas as dúvidas que os alunos tiverem. Sempre que a
+                                professora puder ela entrará no grupo e respondera as dúvidas. <br><del><strong>R$
+                                        250,00</strong></del>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        @else
+
+        {{-- Terceiro quadro --}}
+        <div class="terceiro-quadro">
+            <p class=texto-padrao-grande>
+                <strong>
+                    VEJAS AS RECEITAS QUE VOCÊ VAI APRENDER:
+                </strong>
+            </p>
+
+            <div class="texto-padrao-medio">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Brigadeiro com Leite em pó
+                        </p>
+                    </div>
+
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Coco com Abacaxi
+                        </p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Prestígio
+                        </p>
+                    </div>
+
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Damasco
+                        </p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Red Velvet
+                        </p>
+                    </div>
+
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Leite em pó com Oreo
+                        </p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Coco com Ameixa
+                        </p>
+                    </div>
+
+                    <div class="col-5">
+                        <p class="texto-alinhamento-esquerda">
+                            <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
+                            Bombom
+                        </p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+
+            <p class="texto-vermelho-grande">
+                <strong>
+                    + BÔNUS
+                </strong>
+            </p>
+            <P class="texto-padrao-medio">
+                <strong>
+                    EXCLUSIVOS DO NOSSO CURSO
+                </strong>
+            </P>
+            <div class="container secao-bonus">
+                <div class="row linha-bonus">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 bonus">
+                        <div class="bonus-texto">
+                            <img class="imagem-secao-bonus" src="https://i.ibb.co/x1xmqGm/icone-bonus-1.png">
+                            <p class="bonus-titulo-texto-explicativo">
+                                <strong>
+                                    MENTORIA COM OS ALUNOS
+                                </strong>
+                            </p>
+                            <p class="bonus-texto-explicativo">
+                                Duas horas de Mentoria em grupo e ao vivo, para os alunos tirarem todas as dúvidas que
+                                quiserem com a Emili Ananias.
+                                <br><del><strong>R$ 200,00</strong></del>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 bonus">
+                        <div class="bonus-texto">
+                            <img class="imagem-secao-bonus" src="https://i.ibb.co/pfxTC2y/icone-bonus-2.png">
+                            <p class="bonus-titulo-texto-explicativo">
+                                <strong>
+                                    GRUPO COM OS ALUNOS
+                                    <br>
+                                    NO WHATSAPP
+                                </strong>
+                            </p>
+                            <p class="bonus-texto-explicativo">
+                                Grupo no WhatsApp para tirar todas as dúvidas que os alunos tiverem. Sempre que a
+                                professora puder ela entrará no grupo e respondera as dúvidas. <br><del><strong>R$
+                                        250,00</strong></del>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @endif
 
         {{-- Quarto quadro --}}
         <div class="quarto-quadro">
@@ -334,7 +472,8 @@
                                 </strong>
                             </p>
                             <p>
-                                Se achou que o curso não é para você, devolvemos o valor investido sem nenhuma burocracia.
+                                Se achou que o curso não é para você, devolvemos o valor investido sem nenhuma
+                                burocracia.
                             </p>
                         </div>
                     </div>
@@ -366,7 +505,8 @@
                                 </strong>
                             </p>
                             <p>
-                                Curso feito para quem quer ser prático. Aprender e colocar em prática para logo ter resultados.
+                                Curso feito para quem quer ser prático. Aprender e colocar em prática para logo ter
+                                resultados.
                             </p>
                         </div>
                     </div>
@@ -403,11 +543,13 @@
             </div>
 
             <p>
-                <button type="button" class="btn btn-primary" onclick="goCheckout()">
+                <button type="button" class="btn btn-lg btn-primary" onclick="goCheckout()">
                     <strong>
                         QUERO GARANTIR A MINHA VAGA AGORA
                     </strong>
-                    <i class="bi bi-cart4"></i>
+                    <h2>
+                        <i class="bi bi-cart4"></i>
+                    </h2>
                 </button>
             </p>
         </div>
@@ -423,12 +565,12 @@
                 <p class="texto-alinhamento-justificado texto-sobre-emili">
                     Moradora de Goiânia-GO, tenho 33 anos, empresária, casada, mãe de duas lindas princesas.
                     Formada
-                    em administração de empresas, trabalhei muitos anos em empresas privadas por CLT, mas sempre
-                    fui
-                    apaixonada pela cozinha, com ênfase à confeitaria. Desde pequena, ainda quando eu morava no
+                    em administração de empresas, trabalhei muitos anos em empresas privadas na modalidade CLT, mas
+                    sempre fui apaixonada pela cozinha, com ênfase à confeitaria. Desde pequena, ainda quando eu morava
+                    no
                     município de Caiapônia-GO, ia passear na casa da minha madrinha e lá ficava encantada com os
-                    bolos maravilhosos e deliciosos que ela fazia. Daí eu ficava sonhando... um dia serei uma
-                    boleira de mãos cheias como ela. A minha história com a confeitaria começou quando eu tive
+                    bolos maravilhosos e deliciosos que ela fazia. Daí eu ficava sonhando... "Um dia serei uma
+                    boleira de mãos cheias como ela...". A minha história com a confeitaria começou quando eu tive
                     minha
                     primeira filha e resolvi sair do trabalho pra cuidar dela em casa. Foi quando a minha chave
                     virou e pensei: "Vou começar a fazer bolos para vender. Gosto muito da confeitaria. Vou
@@ -436,8 +578,8 @@
                     o amor com o dom e fazer disso uma renda profissional."
                 </p>
                 <p class="texto-alinhamento-justificado texto-sobre-emili">
-                    Então, em 03/2010 comecei a empreender no ramo da confeitaria. Minha empresa EMILI ANANIAS
-                    CONFEITARIA está no mercado há mais de 10 anos, com cerca de 9600 clientes atendidos e mais
+                    Então, em março de 2010 comecei a empreender no ramo da confeitaria. Minha empresa EMILI ANANIAS
+                    CONFEITARIA está no mercado há mais de 10 anos, com cerca de 9.600 clientes atendidos e mais
                     de
                     300 alunos profissionalizados em chocolataria e confeitaria. Além do ateliê físico em
                     Goiânia,
@@ -465,15 +607,17 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                         <p>
-                            <iframe class="videos-depoimentos" height ="100%" width="100%" src="https://www.youtube.com/embed/Ncmy_NNCjX4"
-                                title="YouTube video player" frameborder="0"
+                            <iframe class="videos-depoimentos" height="100%" width="100%"
+                                src="https://www.youtube.com/embed/gf3csnK5cHE" title="YouTube video player"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                             </iframe>
                         </p>
                         <p>
-                            <iframe class="videos-depoimentos" height ="100%" width="100%" src="https://www.youtube.com/embed/5L8EiZ-tB-c"
-                                title="YouTube video player" frameborder="0"
+                            <iframe class="videos-depoimentos" height="100%" width="100%"
+                                src="https://www.youtube.com/embed/9IgoYjnToLw" title="YouTube video player"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                             </iframe>
@@ -481,15 +625,17 @@
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                         <p>
-                            <iframe class="videos-depoimentos" height ="100%" width="100%" src="https://www.youtube.com/embed/T3MDYQsCqGw"
-                                title="YouTube video player" frameborder="0"
+                            <iframe class="videos-depoimentos" height="100%" width="100%"
+                                src="https://www.youtube.com/embed/CIEvXoVa6fk" title="YouTube video player"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                             </iframe>
                         </p>
                         <p>
-                            <iframe class="videos-depoimentos" height ="100%" width="100%" src="https://www.youtube.com/embed/whkqtuSFLKI"
-                                title="YouTube video player" frameborder="0"
+                            <iframe class="videos-depoimentos" height="100%" width="100%"
+                                src="https://www.youtube.com/embed/8a-OPqhzbIU" title="YouTube video player"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                             </iframe>
@@ -501,13 +647,13 @@
 
         {{-- Oitavo quadro --}}
         <div class="oitavo-quadro">
-            <p class="texto-alinhamento-centralizado texto-padrao-grande linha-margem-rodape texto-vermelho">
+            <p class="texto-alinhamento-centralizado texto-padrao-medio linha-margem-rodape texto-vermelho">
                 <strong>
                     AVISO LEGAL
                 </strong>
             </p>
             <div class="container">
-                <p class="texto-alinhamento-justificado texto-padrao-medio">
+                <p class="texto-alinhamento-justificado texto-padrao-pequeno">
                     Os produtos e serviços vendidos neste site não devem ser interpretados como uma promessa ou garantia
                     de
                     resultados. Seu nível de sucesso em alcançar os resultados divulgados com o uso de nossos produtos e
@@ -523,6 +669,31 @@
             </div>
         </div>
     </center>
+
+    <span id="toTopBtn">
+        <h1>
+            <i class="bi bi-arrow-up-square-fill"></i>
+        </h1>
+    </span>
+
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 20) {
+                    $('#toTopBtn').fadeIn();
+                } else {
+                    $('#toTopBtn').fadeOut();
+                }
+            });
+
+            $('#toTopBtn').click(function() {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 1000);
+                return false;
+            });
+        }); 
+    </script>
 </body>
 
 </html>
