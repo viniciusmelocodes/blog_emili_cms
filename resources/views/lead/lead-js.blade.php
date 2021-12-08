@@ -10,7 +10,7 @@
     }
 
     function goPdfEbook() {
-        window.open('https://www.emiliananiasconfeitaria.com.br/downloads/ebook_emili_receitas_doces.pdf', '_blank');
+        window.open('{!! env('URL_PDF_EBOOK') !!}', '_blank');
     }
 
     function validarEmail(email) {
