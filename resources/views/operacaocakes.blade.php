@@ -75,9 +75,40 @@
     </script>
     <!--End of Tawk.to Script-->
 
+    <!-- counter.dev -->
     <script>
         if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"viniciusldemelo",utcoffset:"-3"}))};sessionStorage.setItem("_swa","1");
     </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PTTS4TZ');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '306799117540396');
+        fbq('track', 'PageView');
+    </script>
+
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=306799117540396&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
 
 </head>
 
@@ -171,8 +202,7 @@
             Curtiu nossa programação? Então já marque na sua agenda para não perder nenhuma aula.
         </h6>
         <h6 class="margem-topo">Até lá.</h6>
-        <p style="font-size: 12px">Obs: Não serão fornecidas as receitas das preparações apresentadas na
-            Operação Cakes. Estarão todas no curso on-line.</+p>
+        <p style="font-size: 12px"></p>
     </div>
     @else
     <div class="row justify-content-center margem-topo">
@@ -286,8 +316,7 @@
                 Curtiu nossa programação? Então já marque na sua agenda para não perder nenhuma aula.
             </h5>
             <h5 class="margem-topo">Até lá.</h5>
-            <p style="font-size: 13px">Obs: Não serão fornecidas as receitas das preparações apresentadas na
-                Operação Cakes. Estarão todas no curso on-line.</+p>
+            <p style="font-size: 13px"></p>
         </div>
         <div class="col-1"></div>
     </div>
@@ -456,6 +485,24 @@
             }
         }
     </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTTS4TZ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <!-- Rastreamento Active Code -->
+    <script type="text/javascript">
+        (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+        vgo('setAccount', '611697366');
+        vgo('setTrackByDefault', true);
+
+        vgo('process');
+    </script>
+    <!-- Rastreamento utm Code -->
 
 </body>
 

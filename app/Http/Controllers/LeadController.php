@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification;
+use Jenssegers\Agent\Agent;
 
 class LeadController extends Controller
 {
@@ -20,7 +21,13 @@ class LeadController extends Controller
      */
     public function index()
     {
-        return view('lead.lead');
+        $agent = new Agent();
+
+        $isPhone = $agent->isPhone();
+
+        return view('lead.lead', [
+            'isPhone' => $isPhone,
+        ]);
     }
 
     /**

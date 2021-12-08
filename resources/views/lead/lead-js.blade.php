@@ -17,6 +17,14 @@
         window.open('https://emiliananiasconfeitaria.com.br/receitas-doces/meuebook/' + email, '_blank');
     }
 
+    function validarEmail(email) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+            return (true)
+        }
+
+        return (false)
+    }
+
     const isNumericInput = (event) => {
         const key = event.keyCode;
         return ((key >= 48 && key <= 57) || // Allow number line
@@ -69,7 +77,9 @@
         let email = $('#email').val();
         let telefone = $('#telefone').val();
         
-        if (nome != '' && email != '' && telefone != '') {
+        let isEmailValido = validarEmail(email)
+
+        if (nome != '' && email != '' && telefone != '' && isEmailValido) {
              $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
