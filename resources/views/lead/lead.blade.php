@@ -2,8 +2,8 @@
 
 @section('content')
 @if ($isPhone)
-<div class="divContainer">
-    <div class="container margem-topo-pagina">
+<div class="margem-topo-pagina margem-rodape-pagina">
+    <div class="container">
         <div class="card">
             <div class="row d-flex justify-content-center flex-nowrap">
                 <img class="logomarca-mobile" src="{{ asset('assets/images/logomarca.webp') }}">
@@ -12,7 +12,7 @@
             <div class="card-body">
                 <h5 class="texto-centralizado">Cadastre-se abaixo para pegar seu e-book!</h5>
                 <form>
-                    <div class="form-group row">
+                    <div class="mb-3">
                         <label id="labelNomeCompleto" for="nome_completo"
                             class="col-xl-2 col-md-4 col-lg-3 col-sm-2 col-form-label">Nome
                             Completo</label>
@@ -21,7 +21,7 @@
                                 placeholder="Seu Nome Completo">
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="mb-3">
                         <label id="labelEmail" for="email"
                             class="col-xl-2 col-md-4 col-lg-3 col-sm-2 col-form-label">E-mail</label>
                         <div class="col-xl-10 col-md-8 col-lg-9 col-sm-10">
@@ -29,7 +29,7 @@
                                 placeholder="Seu E-mail">
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div class="mb-3">
                         <label id="labelNumeroWhatsapp" for="numero_whatsapp"
                             class="col-xl-2 col-md-4 col-lg-3 col-sm-2 col-form-label">Nº
                             WhatsApp</label>
@@ -57,8 +57,8 @@
 
 @else
 
-<div class="divContainer">
-    <div class="container  margem-topo-pagina">
+<div class="margem-topo-pagina margem-rodape-pagina">
+    <div class="container">
         <div class="card">
             <div class="row d-flex justify-content-center flex-nowrap">
                 <img class="logomarca" src="{{ asset('assets/images/logomarca.webp') }}">
@@ -66,34 +66,26 @@
 
             <div class="card-body">
                 <h5 class="texto-centralizado margem-rodape">Cadastre-se abaixo para pegar seu e-book!</h5>
-                <form>
-                    <div class="form-group row">
-                        <label id="labelNomeCompleto" for="nome_completo"
-                            class="col-xl-2 col-md-4 col-lg-3 col-sm-2 col-form-label">Nome
-                            Completo</label>
-                        <div class="col-xl-10 col-md-8 col-lg-9 col-sm-10">
-                            <input type="text" class="form-control form-control-lg" id="nome" name="nome"
-                                placeholder="Seu Nome Completo">
-                        </div>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg" id="nome" name="nome"
+                                    placeholder="Seu nome completo">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control form-control-lg" id="email" name="email"
+                                    placeholder="Seu melhor e-mail">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-lg" id="telefone" name="telefone"
+                                    placeholder="Seu nº de WhatsApp">
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group row">
-                        <label id="labelEmail" for="email"
-                            class="col-xl-2 col-md-4 col-lg-3 col-sm-2 col-form-label">E-mail</label>
-                        <div class="col-xl-10 col-md-8 col-lg-9 col-sm-10">
-                            <input type="text" class="form-control form-control-lg" id="email" name="email"
-                                placeholder="Seu E-mail">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label id="labelNumeroWhatsapp" for="numero_whatsapp"
-                            class="col-xl-2 col-md-4 col-lg-3 col-sm-2 col-form-label">Nº
-                            WhatsApp</label>
-                        <div class="col-xl-10 col-md-8 col-lg-9 col-sm-10">
-                            <input type="text" class="form-control form-control-lg" id="telefone" name="telefone"
-                                placeholder="Seu Nº de WhatsApp">
-                        </div>
-                    </div>
-                </form>
+                    <div class="col-3"></div>
+                </div>
                 <center>
                     <button class="btn btn-danger btn-lg" id="buttonPegarMeuEbook" onclick="pegarMeuEbook()">
                         <i class="fa fa-fw fa-arrow-right"></i>Pegar meu e-book<i class="fa fa-fw fa-arrow-left"></i>
@@ -111,7 +103,7 @@
 </div>
 @endif
 
-@include('lead.modal-loading')
+@include('lead.modal-link')
 @endsection
 
 @push('scripts-css')

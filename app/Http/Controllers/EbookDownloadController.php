@@ -26,7 +26,7 @@ class EbookDownloadController extends Controller
             $lead = Lead::where('email', mb_strtolower($email))->whereBetween('updated_at', [$fiveMinutes, $now])->get();
 
             if (count($lead) > 0) {
-                $pathDownload = public_path('downloads/ebook_emili_19483924.pdf');
+                $pathDownload = public_path('downloads/ebook_emili_receitas_doces.pdf');
 
                 Log::debug('Arquivo PDF entregue ao lead: ' . $email);
 

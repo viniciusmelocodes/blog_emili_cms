@@ -3,13 +3,14 @@
         background-color: #fcccfc
     }
 
-    /* #containerPagina { */
-        /* padding-top: 30px; */
-    /* } */
-
     .margem-topo-pagina {
-        padding-top: 30px;
+        margin-top: 30px;
     }
+
+    .margem-rodape-pagina {
+        margin-bottom: 30px;
+    }
+
     .margem-topo {
         margin-top: 10px
     }
@@ -20,7 +21,7 @@
 
     .logomarca {
         padding-top: 10px;
-        width: 33%;
+        width: 28%;
     }
 
     .logomarca-mobile {

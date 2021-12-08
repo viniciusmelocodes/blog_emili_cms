@@ -61,8 +61,6 @@ class LeadController extends Controller
                     ->route('message', 'Lead nome: ' . $data['nome'] . ', e-mail: ' . $email . ', telefone: ' . $data['telefone'])
                     ->notify(new LeadReady());
 
-                Log::debug('Arquivo PDF entregue ao lead: ' . $data['nome'] . ', e-mail: ' . $email . ', telefone: ' . $data['telefone']);
-
                 return response()->json(['status' => 'success']);
             } else {
                 return response()->json(['status' => 'warning', 'mensagem' => 'e-mail existente.']);
@@ -108,8 +106,6 @@ class LeadController extends Controller
             Notification::route('telegram_user_id', env('TELEGRAM_CHANNEL_LEADS_ID'))
                 ->route('message', 'Lead nome: ' . $data['nome'] . ', e-mail: ' . $email . ', telefone: ' . $data['telefone'])
                 ->notify(new LeadReady());
-
-            Log::debug('Arquivo PDF entregue ao lead: ' . $data['nome'] . ', e-mail: ' . $email . ', telefone: ' . $data['telefone']);
 
             return response()->json(['status' => 'success']);
 

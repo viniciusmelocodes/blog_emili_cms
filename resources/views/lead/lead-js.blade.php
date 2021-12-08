@@ -1,6 +1,6 @@
 <script type="text/javascript" defer>
     $(document).ready(function() {
-        limparCampos();        
+        limparCampos();
     });
     
     function limparCampos() {  
@@ -9,12 +9,8 @@
         $("#telefone").val('')
     }
 
-    function goHome() {
-        window.location.href = 'https://emiliananiasconfeitaria.com.br/receitas-doces';
-    }
-
-    function goPdfEbook(email) {
-        window.open('https://emiliananiasconfeitaria.com.br/receitas-doces/meuebook/' + email, '_blank');
+    function goPdfEbook() {
+        window.open('https://www.emiliananiasconfeitaria.com.br/downloads/ebook_emili_receitas_doces.pdf', '_blank');
     }
 
     function validarEmail(email) {
@@ -86,8 +82,6 @@
                 }
             });
             
-            $('#modalLoading').modal('show');
-
             return $.ajax({
                     url: '{{route("lead_liberar_ebook")}}',
                     type: 'POST',
@@ -98,72 +92,9 @@
                     },
                     success: function (response) {
                         if (response.status == "success" || response.status == '"success"<pre>') {
-                            Swal.fire({
-                                title: 'Aviso',
-                                text: "O seu e-book está liberado e estará disponível em uma nova aba/janela para download. Caso o seu navegador esteja bloqueando abertura de abas/janelas então lembre de permitir esse site. Gostaria de abrir uma nova aba/janela?",
-                                icon: 'warning',
-                                showCancelButton: true,
-                                confirmButtonColor: '#3085d6',
-                                cancelButtonColor: '#d33',
-                                confirmButtonText: 'Fazer meu download',
-                                cancelButtonText: 'Cancelar'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    goPdfEbook(email);                                
-                                }
-                                $('#modalLoading').modal('hide');
-                            });
+                            $('#modalLink').modal('show');
                         } else if (response.status == "warning" || response.status == '"warning"<pre>') {
-                            Swal.fire({
-                                title: 'Aviso',
-                                text: "O seu e-book já foi liberado anteriormente. Gostaria de uma nova liberação?",
-                                icon: 'warning',
-                                showCancelButton: true,
-                                confirmButtonColor: '#3085d6',
-                                cancelButtonColor: '#d33',
-                                confirmButtonText: 'Enviar',
-                                cancelButtonText: 'Cancelar'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    return $.ajax({
-                                        url: '{{route("lead_liberar_ebook_novamente")}}',
-                                        type: 'POST',
-                                        data: {
-                                            nome: nome,       
-                                            email: email,       
-                                            telefone: telefone,       
-                                        },
-                                        success: function (response) {
-                                            Swal.fire({
-                                                title: 'Aviso',
-                                                text: "O seu e-book está liberado e estará disponível para download em uma nova aba/janela. Caso o seu navegador esteja configurado para bloquear abertura de abas/janelas então lembre de permitir isso. Gostaria de abrir uma nova aba/janela?",
-                                                icon: 'warning',
-                                                showCancelButton: true,
-                                                confirmButtonColor: '#3085d6',
-                                                cancelButtonColor: '#d33',
-                                                confirmButtonText: 'Fazer meu download agora',
-                                                cancelButtonText: 'Cancelar'
-                                            }).then((result) => {
-                                                if (result.isConfirmed) {
-                                                    goPdfEbook(email);                                
-                                                }
-                                                $('#modalLoading').modal('hide');
-                                            });
-                                        },
-                                        error: function (response) {
-                                            Swal.fire({
-                                                title: 'Erro!',
-                                                text: 'Comunique ao administrador sobre esse erro. Contato: viniciusldemelo@gmail.com. Detalhes: ' + response.responseJSON.message,
-                                                icon: 'error',
-                                                confirmButtonText: 'Fechar'
-                                            })              
-                                            $('#modalLoading').modal('hide');                              
-                                        }
-                                    });
-                                } else {                                    
-                                    $('#modalLoading').modal('hide');
-                                }
-                            })                            
+                            $('#modalLink').modal('show');                          
                         }
 
                         limparCampos();                    
@@ -188,62 +119,14 @@
                                 $('#modalLoading').modal('hide');                            
                             }
                         } else if (response.responseText == "warning" || response.responseText == '"warning"<pre>') {
-                            Swal.fire({
-                                title: 'Aviso',
-                                text: "O seu e-book já foi liberado anteriormente. Gostaria de uma nova liberação?",
-                                icon: 'warning',
-                                showCancelButton: true,
-                                confirmButtonColor: '#3085d6',
-                                cancelButtonColor: '#d33',
-                                confirmButtonText: 'Enviar',
-                                cancelButtonText: 'Cancelar'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    return $.ajax({
-                                        url: '{{route("lead_liberar_ebook_novamente")}}',
-                                        type: 'POST',
-                                        data: {
-                                            nome: nome,       
-                                            email: email,       
-                                            telefone: telefone,       
-                                        },
-                                        success: function (response) {
-                                            Swal.fire({
-                                                title: 'Aviso',
-                                                text: "O seu e-book está liberado e estará disponível para download em uma nova aba/janela. Caso o seu navegador esteja configurado para bloquear abertura de abas/janelas então lembre de permitir isso. Gostaria de abrir uma nova aba/janela?",
-                                                icon: 'warning',
-                                                showCancelButton: true,
-                                                confirmButtonColor: '#3085d6',
-                                                cancelButtonColor: '#d33',
-                                                confirmButtonText: 'Fazer meu download agora',
-                                                cancelButtonText: 'Cancelar'
-                                            }).then((result) => {
-                                                if (result.isConfirmed) {
-                                                    goPdfEbook(email);                                
-                                                }
-                                                $('#modalLoading').modal('hide');
-                                            });
-                                        },
-                                        error: function (response) {
-                                            Swal.fire({
-                                                title: 'Erro!',
-                                                text: 'Comunique ao administrador sobre esse erro. Contato: viniciusldemelo@gmail.com. Detalhes: ' + response.responseJSON.detalhes,
-                                                icon: 'error',
-                                                confirmButtonText: 'Fechar'
-                                            })      
-                                            $('#modalLoading').modal('hide');                                      
-                                        }
-                                    });
-                                }
-                            })      
+                            $('#modalLink').modal('show');
                         } else {
                             Swal.fire({
                                 title: 'Erro!',
                                 text: 'Comunique ao administrador sobre esse erro. Contato: viniciusldemelo@gmail.com. Detalhes: ' + response.responseJSON.detalhes,
                                 icon: 'error',
                                 confirmButtonText: 'Fechar'
-                            })                    
-                            $('#modalLoading').modal('hide');        
+                            })   
                         }
 
                         limparCampos();
