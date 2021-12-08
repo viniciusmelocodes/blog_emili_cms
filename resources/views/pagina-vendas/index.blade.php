@@ -186,7 +186,7 @@
             </div>
         </div>
 
-        @if ($isPhone)
+        @if ($isMobile)
         {{-- Terceiro quadro --}}
         <div class="terceiro-quadro">
             <p class=texto-padrao-grande>

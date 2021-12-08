@@ -62,10 +62,10 @@ Route::prefix('/operacao-cakes')->group(function () {
 Route::get('/curso_bolo_gelado', function () {
     $agent = new Agent();
 
-    $isPhone = $agent->isPhone();
+    $isMobile = $agent->isMobile();
 
     return view('pagina-vendas.index', [
-        'isPhone' => $isPhone,
+        'isMobile' => $isMobile,
     ]);
 });
 
