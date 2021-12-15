@@ -609,6 +609,8 @@
                                 allowfullscreen>
                             </iframe>
                         </p>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                         <p>
                             <iframe class="videos-depoimentos" height="100%" width="100%"
                                 src="https://www.youtube.com/embed/9IgoYjnToLw" title="YouTube video player"
@@ -627,6 +629,30 @@
                                 allowfullscreen>
                             </iframe>
                         </p>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <p>
+                            <iframe class="videos-depoimentos" height="100%" width="100%"
+                                src="https://www.youtube.com/embed/8a-OPqhzbIU" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <p>
+                            <iframe class="videos-depoimentos" height="100%" width="100%"
+                                src="https://www.youtube.com/embed/CIEvXoVa6fk" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </p>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                         <p>
                             <iframe class="videos-depoimentos" height="100%" width="100%"
                                 src="https://www.youtube.com/embed/8a-OPqhzbIU" title="YouTube video player"

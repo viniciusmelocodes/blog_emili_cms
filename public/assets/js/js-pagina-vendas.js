@@ -1,5 +1,5 @@
 function goCheckout() {
-    window.open("https://sun.eduzz.com/877020?cupom=BOLOGELADO300", '_blank');
+    window.open("https://sun.eduzz.com/877020?cupom=DESCONTO300", '_blank');
 }
 
 function goIGMoonlanderDigital() {
