@@ -195,79 +195,74 @@
                 </strong>
             </p>
 
-            <div class="texto-padrao-medio">
+            <div class="texto-padrao-pequeno">
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-5">
+                    <div class="col-2"></div>
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Brigadeiro com
-                            <br>
                             Leite em pó
                         </p>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-6">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Coco com Abacaxi
                         </p>
                     </div>
-                    <div class="col-1"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-5">
+                    <div class="col-2"></div>
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Prestígio
                         </p>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-6">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Damasco
                         </p>
                     </div>
-                    <div class="col-1"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-5">
+                    <div class="col-2"></div>
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Red Velvet
                         </p>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-6">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Leite em pó com Oreo
                         </p>
                     </div>
-                    <div class="col-1"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-5">
+                    <div class="col-2"></div>
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Coco com Ameixa
                         </p>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-6">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas-phone" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Bombom
                         </p>
                     </div>
-                    <div class="col-1"></div>
                 </div>
 
             </div>
@@ -293,9 +288,9 @@
                                 </strong>
                             </p>
                             <p class="bonus-texto-explicativo">
-                                Duas horas de Mentoria em grupo e ao vivo, para os alunos tirarem todas as dúvidas que
-                                quiserem com a Emili Ananias.
-                                <br><del><strong>R$ 200,00</strong></del>
+                                Duas horas de mentoria em grupo e ao vivo, para os alunos tirarem dúvidas com a
+                                professora Emili Ananias.
+                                <br><del><strong>R$ 700,00</strong></del>
                             </p>
                         </div>
                     </div>
@@ -310,8 +305,8 @@
                                 </strong>
                             </p>
                             <p class="bonus-texto-explicativo">
-                                Grupo no WhatsApp para tirar todas as dúvidas que os alunos tiverem. Sempre que a
-                                professora puder ela entrará no grupo e respondera as dúvidas. <br><del><strong>R$
+                                Grupo no WhatsApp para tirar dúvidas que os alunos tiverem. A
+                                professora sempre entrará no grupo e responderá todas as dúvidas. <br><del><strong>R$
                                         250,00</strong></del>
                             </p>
                         </div>
@@ -331,75 +326,75 @@
 
             <div class="texto-padrao-medio">
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-5">
+                    <div class="col-2"></div>
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Brigadeiro com Leite em pó
                         </p>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Coco com Abacaxi
                         </p>
                     </div>
-                    <div class="col-1"></div>
+                    <div class="col-2"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-5">
+                    <div class="col-2"></div>
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Prestígio
                         </p>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Damasco
                         </p>
                     </div>
-                    <div class="col-1"></div>
+                    <div class="col-2"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-5">
+                    <div class="col-2"></div>
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Red Velvet
                         </p>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Leite em pó com Oreo
                         </p>
                     </div>
-                    <div class="col-1"></div>
+                    <div class="col-2"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-5">
+                    <div class="col-2"></div>
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Coco com Ameixa
                         </p>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-4">
                         <p class="texto-alinhamento-esquerda">
                             <img class="imagem-secao-veja-receitas" src="https://i.ibb.co/0nf3yV9/icone-5.png">
                             Bombom
                         </p>
                     </div>
-                    <div class="col-1"></div>
+                    <div class="col-2"></div>
                 </div>
             </div>
 
@@ -424,9 +419,9 @@
                                 </strong>
                             </p>
                             <p class="bonus-texto-explicativo">
-                                Duas horas de Mentoria em grupo e ao vivo, para os alunos tirarem todas as dúvidas que
-                                quiserem com a Emili Ananias.
-                                <br><del><strong>R$ 200,00</strong></del>
+                                Duas horas de mentoria em grupo e ao vivo, para os alunos tirarem dúvidas com a
+                                professora Emili Ananias.
+                                <br><del><strong>R$ 700,00</strong></del>
                             </p>
                         </div>
                     </div>
@@ -441,8 +436,8 @@
                                 </strong>
                             </p>
                             <p class="bonus-texto-explicativo">
-                                Grupo no WhatsApp para tirar todas as dúvidas que os alunos tiverem. Sempre que a
-                                professora puder ela entrará no grupo e respondera as dúvidas. <br><del><strong>R$
+                                Grupo no WhatsApp para tirar dúvidas que os alunos tiverem. A
+                                professora sempre entrará no grupo e responderá todas as dúvidas. <br><del><strong>R$
                                         250,00</strong></del>
                             </p>
                         </div>

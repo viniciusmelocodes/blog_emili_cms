@@ -59,7 +59,7 @@ a {
 }
 
 .imagem-secao-veja-receitas-phone {
-    width: 30px;
+    width: 20px;
 }
 
 .texto-alinhamento-esquerda {
@@ -147,7 +147,7 @@ a {
 
     /* Veja receitas */
     .imagem-secao-veja-receitas {
-        width: 3%;
+        width: 8%;
     }
 
     .texto-secao-veja-receitas-1 {
@@ -1112,7 +1112,7 @@ a {
     }
 
     .texto-padrao-pequeno {
-        font-size: 13px;
+        font-size: 9px;
     }
 
     .texto-padrao-medio {
